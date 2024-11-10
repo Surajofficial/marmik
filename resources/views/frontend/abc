@@ -1,0 +1,185 @@
+// Get ShipRocket token
+
+function getToken(){
+
+$shiprocketEmailId = config('mii-shiprocket.shiprocket_email');
+
+$shiprocketPassword = config('mii-shiprocket.shiprocket_pwd');
+
+// Some test code here. Some more test here
+
+if(ShipRocket::all()->last() == null){
+
+$response = Http::post('https://apiv2.shiprocket.in/v1/external/auth/login', [
+
+'header' => 'Content-Type: application/json',
+
+'email' => $shiprocketEmailId,
+
+'password' => $shiprocketPassword,
+
+]);
+
+$token = $response->json()['token'];
+
+
+// Save record into the table
+
+$shiprocketToken = new ShipRocket();
+
+$shiprocketToken->token = $token;
+
+$shiprocketToken->save();
+
+}
+
+else{
+
+$timeNow = Carbon::now(new \DateTimeZone('Asia/Kolkata'));
+
+$lastTokenTime = Carbon::parse(ShipRocket::all()->last()->updated_at->jsonSerialize())->timezone('Asia/Kolkata')->format('Y-m-d H:i:s');
+
+
+$hoursDifference = $timeNow->diffInHours($lastTokenTime);
+
+
+$token = null;
+
+
+if($hoursDifference > 23){
+
+// Create new token if token more than a day old
+
+$response = Http::post('https://apiv2.shiprocket.in/v1/external/auth/login', [
+
+'header' => 'Content-Type: application/json',
+
+'email' => $shiprocketEmailId,
+
+'password' => $shiprocketPassword,
+
+]);
+
+$token = $response->json()['token'];
+
+// Save record into the table
+
+$shiprocketToken = new ShipRocket();
+
+$shiprocketToken->token = $token;
+
+$shiprocketToken->save();
+
+}
+
+else{
+
+// Get current token
+
+$token = ShipRocket::all()->last()->token;
+
+}
+
+}
+
+return $token;
+
+}
+
+
+
+
+//// Create Shiprocket consignment
+public function CreateNewOrder($order, $length, $breadth, $height, $weight, $newOrderStatus){
+$thisToken = getToken();
+$orderItemsHtml = array(); // Array required.
+$vendorPickupLocation = 'Default Loc';
+
+
+// Products of all vendors. Admin view
+foreach ($order->products as $product) {
+$record = [];
+$tempSKU = $product->product_sku;
+$tempQty = $product->quantity;
+
+$record['name'] = $product->product_name;
+$record['sku'] = $tempSKU;
+$record['units'] = $tempQty;
+$record['selling_price'] = $product->sale_price;
+
+$orderItemsHtml[] = $record;
+}
+
+try{
+if(isset($order) && !empty($orderItemsHtml)){
+$client = new \GuzzleHttp\Client();
+$paymentMethod = "prepaid";
+if($order->order_payment_method == "COD Payment"){
+$paymentMethod = "cod";
+}
+
+$response = $client->post('https://apiv2.shiprocket.in/v1/external/orders/create/adhoc',[
+"headers"=>[
+"Authorization"=>"Bearer " .$thisToken,
+],
+'form_params'=>[
+"order_id" => "$generatedOrderIDWithVendorIdentifier",
+"order_date" => "$order->created_at",
+"pickup_location" => "$vendorPickupLocation",
+"channel_id" => "",
+"comment" => "Order created from order list page",
+"billing_customer_name" => "$order->billing_first_name",
+"billing_last_name" => "$order->billing_last_name",
+"billing_address" => "$order->billing_address1",
+"billing_address_2" => "$order->billing_address2",
+"billing_city" => "$order->billing_town_city",
+"billing_pincode" => "$order->billing_pin_code",
+"billing_state" => "$order->billing_state",
+"billing_country" => "$order->billing_country",
+"billing_email" => "$order->billing_email",
+"billing_phone" => "$order->billing_mobile_number",
+"shipping_is_billing" => false,
+"shipping_customer_name"=> "$order->shipping_first_name",
+"shipping_last_name" => "$order->shipping_last_name",
+"shipping_address" => "$order->shipping_address1",
+"shipping_address_2" => "$order->shipping_address2",
+"shipping_city" => "$order->shipping_town_city",
+"shipping_pincode" => "$order->shipping_pin_code",
+"shipping_country" => "$order->shipping_country",
+"shipping_state" => "$order->shipping_state",
+"shipping_email" => "$order->shipping_email",
+"shipping_phone" => "$order->shipping_mobile_number",
+"order_items" => $orderItemsHtml,
+"payment_method" => $paymentMethod,
+"shipping_charges" => "$order->order_shipping_value",
+"sub_total" => $vendorOrderSubTotal > 0 ? "$vendorOrderSubTotal" : "$order->order_sub_total",
+"total_discount" => "$order->discount_amount",
+"length" => "$length",
+"breadth" => "$breadth",
+"height" => "$height",
+"weight" => "$weight"
+],
+]);
+
+$shiprocketResponse = json_decode($response->getBody(), true);
+
+
+if($shiprocketResponse['shipment_id'] == null){
+return redirect()->back()->with('error', 'Looks like you do not have your pickup address in place. Please get in touch with Admin to get this sorted!');
+}
+
+}
+else{
+return redirect()->route('orders')->with('success','No items!');
+}
+}
+catch (\GuzzleHttp\Exception\RequestException $e) {
+if ($e->hasResponse()) {
+$response = $e->getResponse();
+if($response->getStatusCode() == 422){
+return redirect()->back()->with('error', $response->getStatusCode()
+. ' - ' . 'Invalid characters in product SKU. Shipping failed!');
+}
+}
+}
+}

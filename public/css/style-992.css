@@ -1,0 +1,90 @@
+* mavogation bar css */
+
+/* navbar width */
+.ecommerce-navbar .navbar-collapse {
+width: 70% !important;
+}
+
+.ecommerce-navbar {
+height: 100px;
+}
+
+#navbar .container-fluid {
+position: absolute;
+height: 100px !important;
+top: 0px;
+padding: 0px;
+margin: 0px 5px;
+display: flex;
+justify-content: space-evenly;
+}
+
+button[data-bs-target='#navbarSupportedContent'] {
+width: 100px;
+height: 55px;
+margin-top: 22px;
+}
+
+.navbar-brand {
+width: 100px;
+margin-top: 24px !important;
+}
+
+.navbar-brand img {
+width: 65px !important;
+height: auto;
+}
+.logo-dark{
+text-align: center;
+}
+
+#navebaricon {
+display: flex;
+justify-content: center;
+}
+
+#brandecommercecard i {
+font-size: 40px !important;
+}
+
+#brandecommercecard span {
+font-size: 10px !important;
+}
+
+#brandecommercecard {
+height: 43px !important;
+margin: 0px 32PX;
+margin-top: 14px;
+}
+
+#page-header-user-dropdown {
+height: 70px;
+}
+
+#page-header-user-dropdown img {
+height: 57px;
+width: 57px;
+}
+
+
+#navbar2 {
+height: 0px;
+}
+
+#navbar {
+top: -31px;
+position: fixed !important;
+z-index: 9;
+}
+
+#navbar #navbarSupportedContent1+div {
+margin-top: 20px;
+}
+
+button[data-bs-target='#navbarSupportedContent'] i {
+font-size: 50px !important;
+}
+
+.page-wrapper {
+margin-top: 150px;
+}

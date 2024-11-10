@@ -1,0 +1,145 @@
+body {
+    max-width: 100vw !important;
+    width: 100vw !important;
+    overflow-x: hidden !important;
+    box-sizing: border-box;
+    padding: auto;
+    position: relative;
+}
+
+body::after {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* background: url('/assets/images/texture.jpg') no-repeat center center / cover; */
+    opacity: 0.4;
+    /* Adjust the opacity to your preference */
+    z-index: -1;
+    /* Ensure the background stays behind content */
+    pointer-events: none;
+    /* Prevent interaction with the pseudo-element */
+}
+
+#topbanners {
+    max-width: 100%;
+    position: relative;
+    top: 0;
+    padding: 0;
+}
+
+#topbanners img {
+    width: 100vw;
+    object-fit: cover;
+    margin: 0px;
+    padding: 0px;
+}
+
+#routinbtns {
+    position: absolute;
+    bottom: 0;
+    background-color: rgb(250, 231, 215, 0.8);
+}
+
+#routinbtns .row {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: center;
+}
+
+.routinbtns {
+    border: 1px solid;
+    padding: 10px 30px;
+    border-radius: 200px;
+    width: 300px;
+    display: flex;
+    padding: 5px 20px;
+    margin: 0px 10px;
+}
+
+#whatsappbtn {
+    border-radius: 50%;
+    left: 1%;
+    bottom: 0% !important;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+}
+
+#navbar,
+#navbar2 {
+    top: 0;
+}
+
+#navbar .container-fluid {
+    margin-top: 28px;
+}
+
+
+
+/*
+top selling products style css start
+*/
+/* #topsellingproducts .gallery-product a{
+max-height: 190px;
+max-width: 100%;
+} */
+/*
+shop by concern style css start
+*/
+/* section:nth-child(2n) {
+    background-color: antiquewhite;
+} */
+
+#shopbyconcern .category-btn1 {
+    background-color: rgba(255, 255, 255, .88);
+    box-sizing: inherit;
+    display: block;
+    margin-bottom: 10px;
+    margin-top: -65px;
+    z-index: 5;
+    position: relative;
+    padding: 7px;
+    text-transform: uppercase;
+    font-weight: 700;
+    line-height: 1.5;
+    width: 80%;
+    text-align: center;
+    margin-left: 10%;
+}
+
+/*
+shop by product type style css start
+*/
+#shopbyproducttype .category-btn1 {
+    background-color: rgba(255, 255, 255, .88);
+    box-sizing: inherit;
+    display:
+        block;
+    margin-bottom: 10px;
+    margin-top: -65px;
+    z-index: 5;
+    position: relative;
+    padding: 7px;
+    text-transform: uppercase;
+    font-weight: 700;
+    line-height: 1.5;
+    width: 80%;
+    text-align: center;
+    margin-left: 10%;
+}
+
+#navbar,
+#navbar2 {
+    position: sticky !important;
+}
+
+#navbar2 {
+    top: 70px;
+}
+
+#navbar {
+    z-index: 999999999;
+}

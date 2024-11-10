@@ -1,0 +1,12 @@
+User-agent:*
+Disallow:/contact
+Disallow:/about-us
+Disallow:/user/login
+Disallow:/faq
+Disallow:/returns
+Disallow:/terms
+Disallow:/book_slot
+
+
+
+

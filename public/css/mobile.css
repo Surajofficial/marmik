@@ -1,0 +1,126 @@
+.navbar-brand {
+    display: none !important;
+}
+
+button[data-bs-target='#navbarSupportedContent'] {
+    width: 58px;
+    height: 40px;
+    margin-top: 37px;
+}
+
+.navbar-brand {
+    width: 100px;
+    margin-top: 24px !important;
+}
+
+.navbar-brand img {
+    width: 70px !important;
+    height: auto;
+}
+
+#navebaricon {
+    display: flex;
+    justify-content: center;
+}
+
+#brandecommercecard i {
+    font-size: 20px !important;
+}
+
+#brandecommercecard span {
+    font-size: 8px !important;
+}
+
+#brandecommercecard {
+    height: 20px !important;
+    margin: 0px 10PX;
+    margin-top: 18px;
+}
+
+#page-header-user-dropdown {
+    height: 35px;
+}
+
+#page-header-user-dropdown img {
+    height: 35px;
+    width: 25px;
+}
+
+#navbar .container-fluid {
+    position: absolute;
+    height: 100px !important;
+    top: 0px;
+    padding: 0px 10px;
+    margin: 0px 5px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.ecommerce-navbar .navbar-nav .nav-item .nav-link {
+    height: 40px !important;
+    font-size: 20px !important;
+    line-height: 20px !important;
+}
+
+.ecommerce-navbar .navbar-nav .nav-item {
+    line-height: 1rem;
+}
+
+ul.navbar-nav {
+    height: auto;
+    padding: 10px 20px;
+}
+
+
+#mobilebrand {
+    height: 148px;
+}
+
+#mobilebrand img {
+    height: 137px;
+}
+
+.page-wrapper {
+    margin-top: 64px;
+}
+
+#routinbtns .row {
+    display: flex;
+    flex-direction: column !important;
+    justify-content: space-evenly !important;
+    align-content: center;
+    height: 120px;
+}
+
+.routinbtns {
+    height: 55px;
+    border: 1px solid;
+    border-radius: 200px;
+
+    width: 300px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+#whatsappbtn {
+    border-radius: 50%;
+    left: 5%;
+    bottom: 1% !important;
+    z-index: 999999999;
+}
+
+#ecommerceHero .ecommerce-home {
+    height: 350px !important;
+}
+
+.bannerbtn {
+    position: absolute;
+    bottom: 20px;
+}
+
+#navbar {
+    top: -36px;
+    position: fixed !important;
+    z-index: 9;
+}

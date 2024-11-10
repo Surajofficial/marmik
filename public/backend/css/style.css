@@ -1,0 +1,18 @@
+#pagination .relative svg {
+    width: 50px !important;
+    height: 50px !important;
+    font-size: 10px;
+}
+
+#pagination nav[role="navigation"] {
+    display: flex;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+#pagination {
+    display: block;
+    width: 70vw;
+}

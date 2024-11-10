@@ -1,0 +1,2 @@
+[29-Dec-2023 08:01:45 UTC] PHP Fatal error:  Cannot declare class CreateConcernTable, because the name is already in use in /home/pzalayes/ecomerce.codewithsurajtiwari.com/awish_ecommerce/database/migrations/2023_11_29_065502_product.php on line 7
+[10-Jan-2024 07:52:11 UTC] PHP Fatal error:  Trait "Spatie\Permission\Traits\HasRoles" not found in /home/pzalayes/ecomerce.codewithsurajtiwari.com/awish_ecommerce/app/User.php on line 13
