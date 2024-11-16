@@ -1,6 +1,6 @@
 @extends('frontend.layouts.master')
 
-@section('title', 'Dr Awish || {{ $title }}')
+@section('title', 'MARMIK || {{ $title }}')
 
 @section('main-content')
 
@@ -32,7 +32,7 @@
 
             @if ($type)
 
-                <div class="row justify-content-center">
+                <div class="row justify-content-center" >
                     @foreach ($type as $types)
                         <div class="col-lg-3 col-md-6 m-3">
                             <div class="card concern-card img-hover-zoom overflow-hidden img-hover-zoom--slowmo shadow-lg overflow-hidden br-5 w-100 "

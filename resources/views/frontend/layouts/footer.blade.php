@@ -60,9 +60,10 @@
             gap: 0 !important;
         }
     }
+
 </style>
 
-<section class="section footer-landing mt-0 pb-0 border-top-1 bg-dark bg-opacity-50">
+<section class="section footer-landing mt-0 pb-0 border-top-1 " style="background-color: black;">
     <div class="container-fluid pb-1 pt-3 ">
         <div class="row justify-content-between">
             <div class="col-lg-4">
@@ -73,7 +74,7 @@
                     <img src="@foreach ($settings as $data) {{ $data->logo }} @endforeach" alt="logo"
                         class="logo-dark logo w-50">
 
-                    <p class="footer-desc mt-4 mb-2 me-3 fw-light lh-lg text-justify-center">
+                    <p class="footer-desc mt-4 mb-2 me-3 fw-light lh-lg text-justify-center text-light">
                         @foreach ($settings as $data)
                             {!! $data->short_des !!}
                         @endforeach.
@@ -83,15 +84,15 @@
                         <ul class="list-inline mb-0">
                             <li class="list-inline-item">
                                 <a href="@foreach ($settings as $data) {{ @$data->facebook }} @endforeach"
-                                    class="text-reset"><i class="mdi mdi-facebook"></i></a>
+                                    class="text-reset"><i class="mdi mdi-facebook text-light"></i></a>
                             </li>
                             <li class="list-inline-item">
                                 <a href="@foreach ($settings as $data) {{ @$data->instagram }} @endforeach"
-                                    class="text-reset"><i class="mdi mdi-instagram"></i></a>
+                                    class="text-reset"><i class="mdi mdi-instagram text-light"></i></a>
                             </li>
                             <li class="list-inline-item">
                                 <a href="@foreach ($settings as $data) {{ @$data->youtube }} @endforeach"
-                                    class="text-reset"><i class="mdi mdi-youtube"></i></a>
+                                    class="text-reset"><i class="mdi mdi-youtube text-light"></i></a>
                             </li>
                         </ul>
                     </div>
@@ -101,16 +102,16 @@
                 <div class="row gap- ps-0 ps-lg-3">
                     <div class="col-md-4 col-6">
                         <div class="mt-lg-0 mt-4">
-                            <h5 class="footer-title">Information</h5>
+                            <h5 class="footer-title text-light">Information</h5>
                             <ul class="list-unstyled footer-link mt-3">
                                 <li>
-                                    <a class="link-effect link-warning" href="{{ route('about-us') }}">About Us</a>
+                                    <a class="link-effect link-warning text-light" href="{{ route('about-us') }}">About Us</a>
                                 </li>
                                 <li>
-                                    <a class="link-effect link-warning" href="{{ route('account') }}">Ordering</a>
+                                    <a class="link-effect link-warning text-light" href="{{ route('account') }}">Ordering</a>
                                 </li>
                                 <li>
-                                    <a class="link-effect link-warning" href="{{ route('contact') }}">Contact Us</a>
+                                    <a class="link-effect link-warning text-light" href="{{ route('contact') }}">Contact Us</a>
                                 </li>
                             </ul>
                         </div>
@@ -118,20 +119,20 @@
 
                     <div class="col-md-4 col-6">
                         <div class="mt-lg-0 mt-4">
-                            <h5 class="footer-title">My Account</h5>
+                            <h5 class="footer-title text-light">My Account</h5>
                             <ul class="list-unstyled footer-link mt-3">
                                 <li>
-                                    <a class="link-effect link-warning" href="{{ route('cart') }}">View Cart</a>
+                                    <a class="link-effect link-warning text-light" href="{{ route('cart') }}">View Cart</a>
                                 </li>
                                 <li>
-                                    <a class="link-effect link-warning" href="{{ route('account') }}">My Wishlist</a>
+                                    <a class="link-effect link-warning text-light" href="{{ route('account') }}">My Wishlist</a>
                                 </li>
                                 <li>
-                                    <a class="link-effect link-warning" href="{{ route('account') }}">Track My
+                                    <a class="link-effect link-warning text-light" href="{{ route('account') }}">Track My
                                         Order</a>
                                 </li>
                                 <li>
-                                    <a class="link-effect link-warning" href="{{ route('faq') }}">Help</a>
+                                    <a class="link-effect link-warning text-light" href="{{ route('faq') }}">Help</a>
                                 </li>
                             </ul>
                         </div>
@@ -139,14 +140,14 @@
 
                     <div class="col-md-4 col-6">
                         <div class="mt-lg-0 mt-4">
-                            <h5 class="footer-title">Customer Service</h5>
+                            <h5 class="footer-title text-light">Customer Service</h5>
                             <ul class="list-unstyled footer-link mt-3">
 
                                 <li>
-                                    <a class="link-effect link-warning" href="{{ route('returns') }}">Returns</a>
+                                    <a class="link-effect link-warning text-light" href="{{ route('returns') }}">Returns</a>
                                 </li>
                                 <li>
-                                    <a class="link-effect link-warning" href="{{ route('terms') }}">Terms &
+                                    <a class="link-effect link-warning text-light" href="{{ route('terms') }}">Terms &
                                         Conditions</a>
                                 </li>
 
@@ -162,7 +163,7 @@
                 <script>
                     document.write(new Date().getFullYear())
                 </script> Design &amp; Develop by <a href="/" target="_blank"
-                    class="text-reset text-decoration-underline">Awish</a>
+                    class="text-reset text-decoration-underline text-light">Awish</a>
             </div>
             <div class="col-sm-6">
                 <div class="text-sm-end d-none d-sm-block">

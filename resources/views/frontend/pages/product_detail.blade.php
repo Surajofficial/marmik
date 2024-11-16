@@ -581,14 +581,14 @@
         @endauth
     </div>
 
-    <section class="section">
+    <section class="section" style="background-color: black;">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-12">
                     <div class="d-flex align-items-center justify-content-between mb-4 pb-1">
-                        <h4 class="flex-grow-1 mb-0">Similar Products</h4>
+                        <h4 class="flex-grow-1 mb-0 text-light">Similar Products</h4>
                         <div class="flex-shrink-0">
-                            <a href="#" class="">All Products <i
+                            <a href="#" class="text-light">All Products <i
                                     class="ri-arrow-right-line ms-1 align-bottom"></i></a>
                         </div>
                     </div>
@@ -600,7 +600,7 @@
                         <div class="col-xxl-3 col-lg-4 col-sm-6">
                             <div
                                 class="card ecommerce-product-widgets border-0 rounded-0 shadow-none overflow-hidden card-animate">
-                                <div class="bg-light1 bg-opacity-50 rounded py-4 position-relative">
+                                <div class=" bg-opacity-50 rounded py-4 position-relative">
                                     @php
                                         $photo = explode(',', $data->product->photo);
                                         // dd($data);

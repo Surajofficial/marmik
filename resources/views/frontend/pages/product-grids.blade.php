@@ -1,10 +1,10 @@
 @extends('frontend.layouts.master')
 
-@section('title', 'Dr Awish || PRODUCT PAGE')
+@section('title', 'MARMIK || PRODUCT PAGE')
 
 @section('main-content')
 
-<section class="section mt-5" style="padding-top: 100px; background:#ccc">
+<section class="section mt-5">
     <div class="">
         <div class="row justify-content-center">
             <div class="col-lg-6">
@@ -24,12 +24,12 @@
         </div><!--end row-->
     </div>
 </section>
-<section class=" container d-flex justify-content-center image-hover overflow-hidden" style="">
+<!-- <section class=" container d-flex justify-content-center image-hover overflow-hidden" style="">
     <img src="\assets\images\product_grid_picture.webp" class="img-fluid rounded-4 overflow-hidden product-page-img"
         style=""></img>
-</section>
+</section> -->
 
-<div class="section">
+<div class="section" style="background-color: black;">
     <div class="container">
         <div id="col-3-layout">
             <div class="row">
@@ -45,7 +45,7 @@
                         <div class="col-md mt-2">
                             <div class="d-flex gap-2 justify-content-md-end">
                                 <div class="flex-shrink-0">
-                                    <label for="sort-elem" class="col-form-label ">Sort By:</label>
+                                    <label for="sort-elem" class="col-form-label text-light ">Sort By:</label>
                                 </div>
                                 <div class="flex-shrink-0">
                                     <select class="form-select w-md rounded-pill" id="sort-elem">
@@ -91,7 +91,7 @@
                             </div>
                         </div>
 
-                        <h5>No matching records found</h5>
+                        <h5 class="text">No matching records found</h5>
                     </div>
                 </div><!--end col-->
             </div><!--end row-->
@@ -273,13 +273,13 @@
                                 </div>
                                 ${productLabel}
                                 
-                            <div class="card-body pb-0 text-light" style="background-color:rgb(0,0,0)">
+                            <div class="card-body pb-0">
                                 <div>
                                     ${colorElem}
-                                    <a href="${url}" class="w-100 text-light" style="white-space: unset;">
-                                        <h6 class="fs-16 fw-500 mb-3 lh-base truncate-text text-wrap text-light">${data.title}</h6>
+                                    <a href="${url}" class="w-100" style="white-space: unset;">
+                                        <h6 class="fs-16 fw-500 mb-3 lh-base truncate-text text-wrap ">${data.title}</h6>
                                     </a>
-                                    <div class="mt-3 text-light">
+                                    <div class="mt-3">
                                         ${afterDiscountElem}
                                     </div>
                                 </div>
@@ -332,7 +332,7 @@
 
     function getAfterDiscountElement(data, afterDiscount, isCompact = false) {
         return isCompact ?
-            `<h5 class="mb-0 text-light">Rs.${afterDiscount.toFixed(2)} <span class="text-muted fs-12 text-decoration-line-through"><del>MRP Rs. ${data.price}</del></span></h5>` :
+            `<h5 class="mb-0 ">Rs.${afterDiscount.toFixed(2)} <span class="text-muted fs-12 text-decoration-line-through"><del>MRP Rs. ${data.price}</del></span></h5>` :
             `<h5 class="text-secondary text-danger mb-0">Rs. ${afterDiscount.toFixed(2)} <span class="text-muted fs-12 text-decoration-line-through"><del>MRP Rs. ${data.price}</del></span></h5>`;
     }
 

@@ -16,7 +16,9 @@
     }
 
     .new-header {
-        margin-bottom: 30px
+        margin-bottom: 30px;
+        background-color: black;
+        color: white;
     }
 </style>
 
@@ -83,7 +85,7 @@
                     <button type="button" class="btn btn-icon btn-topbar btn-ghost-dark rounded-circle fw-bold"
                         data-bs-toggle="offcanvas" data-bs-target="#ecommerceCart" id="brandecommercecard"
                         aria-controls="ecommerceCart">
-                        <i class="ph-shopping-cart fs-20"></i>
+                        <i class="ph-shopping-cart fs-20 text-light"></i>
                         <span class="position-absolute topbar-badge cartitem-badge translate-middle badge rounded-pill bg-dark cart">{{ Helper::cartCount() != 0 ? Helper::cartCount() : '' }}</span>
                     </button>
                 </div>
@@ -91,31 +93,31 @@
                     <button type="button" class="btn btn-icon btn-topbar btn-ghost-dark rounded-circle fw-bold"
                         id="page-header-user-dropdown" data-bs-toggle="dropdown" aria-haspopup="true"
                         aria-expanded="false">
-                        <i class="ph-user fs-20"></i>
+                        <i class="ph-user fs-20 text-light"></i>
                     </button>
-                    <div class="dropdown-menu dropdown-menu-end" style="z-index:20;">
+                    <div class="dropdown-menu dropdown-menu-end" style="z-index:20; background-color:black">
                         <!-- item-->
                         <h6 class="dropdown-header">Welcome </h6>
     
                         <a class="dropdown-item"href="{{ route('faq') }}"><i
                                 class="mdi mdi-lifebuoy text-muted fs-16 align-middle me-1"></i> <span
-                                class="align-middle">Help</span></a>
+                                class="align-middle text-light">Help</span></a>
                         <div class="dropdown-divider"></div>
     
                         @if (auth()->user() != '')
                             <a class="dropdown-item" href="{{ route('account') }}"><i
                                     class="bi bi-speedometer2 text-muted fs-16 align-middle me-1"></i> <span
-                                    class="align-middle">Dashboard</span></a>
+                                    class="align-middle text-light">Dashboard</span></a>
                             <a class="dropdown-item" href="{{ route('user.logout') }}"><i
                                     class="bi bi-box-arrow-right text-muted fs-16 align-middle me-1"></i> <span
-                                    class="align-middle" data-key="t-logout">Logout</span></a>
+                                    class="align-middle text-light" data-key="t-logout">Logout</span></a>
                         @else
                             <a class="dropdown-item"href="{{ route('login.form') }}"><i
                                     class="bi bi-cart4 text-muted fs-16 align-middle me-1"></i> <span
-                                    class="align-middle">Login</span></a>
+                                    class="align-middle text-light">Login</span></a>
                             <a class="dropdown-item" href="{{ route('register.form') }}"><i
                                     class="bi bi-truck text-muted fs-16 align-middle me-1"></i> <span
-                                    class="align-middle">Register</span></a>
+                                    class="align-middle text-light">Register</span></a>
                         @endif
                     </div>
                 </div>
@@ -123,7 +125,7 @@
                     <!-- Search Button Icon -->
                     <button type="button" class="btn btn-icon btn-topbar btn-ghost-dark rounded-circle fw-bold"
                         id="page-header-search-dropdown " data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <i class="bi bi-search fs-20"></i>
+                        <i class="bi bi-search fs-20 text-light"></i>
                     </button>
     
                     <!-- Dropdown with Search Form -->
@@ -136,7 +138,7 @@
                                     aria-describedby="search-button" style="border-radius: 20px;">
                                 <button class="btn btn-dark" type="submit" id="search-button"
                                     style="border-radius: 20px; margin-left: 5px;">
-                                    <i class="bi bi-search"></i>
+                                    <i class="bi bi-search text-light"></i>
                                 </button>
                             </div>
                         </form>
@@ -144,20 +146,20 @@
                 </div>
 
                 <div class="btn btn-icon btn-topbar btn-ghost-dark rounded-circle fw-bold">
-                    <div class="burger " id="burger">
-                        <span class="burger-line"></span>
-                        <span class="burger-line"></span>
-                        <span class="burger-line"></span>
+                    <div class="burger text-light " id="burger">
+                        <span class="burger-line text-light"></span>
+                        <span class="burger-line text-light"></span>
+                        <span class="burger-line text-light"></span>
                     </div>
                 </div>
                
             </div>
         </div>
-        <div class="navbar-new-block" id="menus">
+        <div class="navbar-new-block text-light" style="background-color: black;" id="menus">
             <ul class="menus">
                 
-                <li class="menus-item">
-                    <a href="{{ route('home') }}" class="menus-link">Home</a>
+                <li class="menus-item text-light">
+                    <a href="{{ route('home') }}" class="menus-link text-light">Home</a>
                 </li>
 
                 <!-- <li class="menus-item dropdowns">
@@ -175,8 +177,8 @@
                         </div>
                     </div>
                 </li> -->
-                <li class="menus-item dropdowns">
-                    <span class="dropdowns-toggle menus-link">
+                <li class="menus-item dropdowns text-light">
+                    <span class="dropdowns-toggle menus-link text-light">
                         @foreach ($settings as $data)
                             {{ $data->categorytext }}
                         @endforeach
@@ -199,7 +201,7 @@
                         </div>
                     </div>
                 </li> -->
-                <li class="menus-item"><a href="{{ route('contact') }}" class="menus-link">Contact Us</a></li>
+                <li class="menus-item"><a href="{{ route('contact') }}" class="menus-link text-light">Contact Us</a></li>
                 <!-- <li class="menus-item text-white bg-black"><a href="{{ route('book_slot') }}"
                         class="menus-link text-white">Free
                         Consultation</a>
@@ -209,7 +211,7 @@
                     <button type="button" class=" menus-link btn btn-icon btn-topbar text-white fw-bold"
                         data-bs-toggle="offcanvas" data-bs-target="#ecommerceCart" id="brandecommercecard"
                         aria-controls="ecommerceCart">
-                        <i class="ph-shopping-cart fs-20"></i>Cart
+                        <i class="ph-shopping-cart fs-20 text-light"></i>Cart
                         <span class="position-absolute topbar-badge cartitem-badge translate-middle badge rounded-pill bg-dark cart">{{ Helper::cartCount() != 0 ? Helper::cartCount() : '' }}</span>
                     </button>
                 </li>
@@ -218,7 +220,7 @@
                     <button type="button" class="menus-link btn btn-icon btn-topbar text-white btn-white fw-bold"
                         id="page-header-user-dropdown" data-bs-toggle="dropdown" aria-haspopup="true"
                         aria-expanded="false">
-                        <i class="ph-user fs-20"></i> User
+                        <i class="ph-user fs-20 text-light"></i> User
                     </button>
                     <div class="dropdown-menu dropdown-menu-end" style="z-index:20;">
                         <!-- item-->
@@ -251,7 +253,7 @@
                     <button type="button" class="menus-link btn btn-icon btn-topbar text-white btn-white fw-bold"
                         id="page-header-user-dropdown" data-bs-toggle="dropdown" aria-haspopup="true"
                         aria-expanded="false">
-                        <i class="ph-user fs-20"></i> User
+                        <i class="ph-user fs-20 text-light"></i> User
                     </button>
                     <div class="dropdown-menu dropdown-menu-end" style="z-index:20;">
                         <!-- item-->
@@ -290,7 +292,7 @@
                         <input class="search expandright" id="searchright" type="search" name="q" placeholder="Search" style="display: none;">
                         <label class="button searchbutton" for="searchright" id="searchLabel">
                             <span class="mglass btn btn-icon btn-topbar btn-ghost-dark rounded-circle fw-bold"> 
-                                <i class="bi bi-search fs-18"></i>
+                                <i class="bi bi-search fs-18 text-light"></i>
                             </span>
                         </label>
                     </form>
@@ -301,7 +303,7 @@
                 <button type="button" class="btn btn-icon btn-topbar btn-ghost-dark rounded-circle fw-bold"
                     data-bs-toggle="offcanvas" data-bs-target="#ecommerceCart" id="brandecommercecard"
                     aria-controls="ecommerceCart">
-                    <i class="ph-shopping-cart fs-24"></i>
+                    <i class="ph-shopping-cart fs-24 text-light"></i>
                     <span
                         class="position-absolute topbar-badge cartitem-badge fs-10 translate-middle badge rounded-pill bg-dark cart">{{ Helper::cartCount() != 0 ? Helper::cartCount() : '' }}</span>
                 </button>
@@ -310,11 +312,11 @@
                 <button type="button" class="btn btn-icon btn-topbar btn-ghost-dark rounded-circle fw-bold"
                     id="page-header-user-dropdown" data-bs-toggle="dropdown-" aria-haspopup="true"
                     aria-expanded="false">
-                    <i class="ph-user fs-24"></i>
+                    <i class="ph-user fs-24 text-light"></i>
                 </button>
-                <div class="dropdown-menu dropdown-menu-end" style="z-index:20;">
+                <div class="dropdown-menu dropdown-menu-end" style="z-index:20; background: black">
                     <!-- item-->
-                    <h6 class="dropdown-header">Welcome </h6>
+                    <h6 class="dropdown-header text-light">Welcome </h6>
 
                     <a class="dropdown-item"href="{{ route('faq') }}"><i
                             class="mdi mdi-lifebuoy text-muted fs-16 align-middle me-1"></i> <span
@@ -334,7 +336,7 @@
                                 class="align-middle">Login</span></a>
                         <a class="dropdown-item" href="{{ route('login.form') }}"><i
                                 class="bi bi-truck text-muted fs-16 align-middle me-1"></i> <span
-                                class="align-middle">Register</span></a>
+                                class="align-middle ">Register</span></a>
                     @endif
                 </div>
             </div>

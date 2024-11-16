@@ -24,10 +24,6 @@
                 </div><!--end row-->
             </div>
         </section>
-        <section class=" container d-flex justify-content-center image-hover overflow-hidden" style="margin-top: -10vh;">
-            <img src="\assets\images\product_grid_picture.webp" class="img-fluid rounded-4 overflow-hidden product-page-img"
-                style=""></img>
-        </section>
 
         <div class="section">
             <div class="container">

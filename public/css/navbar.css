@@ -477,7 +477,7 @@ header .menus {
   height: 0;
   z-index: 99999999999;
   overflow: hidden;
-  background-color: var(--color-white-100);
+  background-color: black;
   transition: height 0.5s ease;
 }
 
@@ -561,10 +561,19 @@ header .menus {
     height: -moz-max-content;
     height: max-content;
     pointer-events: none;
-    background-color: var(--color-white-100);
+    background-color: black;
     border-top: 2px solid var(--color-white-200);
     box-shadow: var(--shadow-large);
     transition: top 0.4s, opacity 0.3s ease;
+  }
+
+  
+  .dropdown-item{
+    color: white;
+  }
+
+  .dropdown-item:hover{
+    color: black;
   }
 
   .dropdowns-column {
@@ -624,6 +633,7 @@ header .menus {
   border: none;
   outline: none;
   visibility: visible;
+  color: white;
 }
 
 .navbar-brand{
@@ -640,7 +650,7 @@ header .menus {
   rotate: 0deg;
   border-radius: 0.15rem;
   /* background-color: var(--color-black-500); */
-  background-color: #0b172a;
+  background-color: white;
   transition: all 0.3s ease;
 }
 
@@ -770,7 +780,7 @@ header .menus {
 } */
 
 .footer-landing .footer-desc,.footer-landing .footer-link a,.footer-landing .footer-border-alt{
-  color: #000!important;
+  color: white!important;
 }
 
 .footer-landing .footer-link li{

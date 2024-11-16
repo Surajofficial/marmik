@@ -58,6 +58,15 @@
     .gallery-product:hover .scl{
         transform: scale(1.04) !important;
     }
+    .nav .nav-link{
+        color: #aaa;
+    }
+    .nav .nav-link:hover{
+        color: #aaa;
+    }
+    .nav .nav-link.active {
+        color: #fff !important; /* Active tab color */
+    }
 
     @media(max-width:410px) {
         .sale-btn .nav-item button {
@@ -105,7 +114,7 @@
 
 </section>
 <!-- START PRODUCT -->
-<section class="py-5" id="shopbyproducttype">
+<section class="py-5" style="background-color: black;" id="shopbyproducttype">
     <div class="container position-relative">
         <ul class="nav mb-3 featured" id="pills-tab" role="tablist">
             <li class="nav-item tab-item" role="presentation">
@@ -129,7 +138,7 @@
                                                     $photo = explode(',', $product->product->photo);
                                                 @endphp
                                                 <div class="col-sm-10 col-md-6 col-lg-3 mb-3">
-                                                    <div class="card text-light shadow-lg overflow-hidden element-item rounded-4 p-0 h-100 w-100" style="background-color:rgb(0,0,0)">
+                                                    <div class="card shadow-lg overflow-hidden element-item rounded-4 p-0 h-100 w-100" >
                                                         <div class="gallery-product overflow-hidden">
                                                             {{-- @if ($product->stock > 0)
                                                                 <a href="{{ route('product-detail', [$product->product->slug, $product->id]) }}">
@@ -180,11 +189,11 @@
                                                                 </a>
                                                             </div>
                                                         </div>
-                                                        <div class="card-body text-light pb-0">
+                                                        <div class="card-body pb-0">
                                                             <div>
                                                                 <a href="{{ route('product-detail', [$product->product->slug, $product->id]) }}"
                                                                     class="w-100" style="white-space: unset;">
-                                                                    <h6 class="fs-16 fw-500 mb-3 lh-base truncate-text text-light  ">
+                                                                    <h6 class="fs-16 fw-500 mb-3 lh-base truncate-text  ">
                                                                         {{ $product->product->title }}
                                                                     </h6>
                                                                 </a>
@@ -196,26 +205,26 @@
                                                                 @if ($product->stock <= 0)
                                                                     <div class="d-inline">
                                                                         <h4 class="fw-500 d-inline text-danger">Out of stock</h4>
-                                                                        <h5 class="text-light d-inline fw-500">Rs.{{ $product->price }}
+                                                                        <h5 class=" d-inline fw-500">Rs.{{ $product->price }}
                                                                         </h5>
                                                                     </div>
                                                                 @else
                                                                     @if ($product->display_price == $product->price)
                                                                         @if ($product->discount > 0)
-                                                                            <h5 class="mb-0  fw-500 text-light ">
+                                                                            <h5 class="mb-0  fw-500">
                                                                                 Rs.{{ number_format($after_discount, 2) }}
-                                                                                <span class="text-light fs-12 text-decoration-line-through"><del>Rs.
+                                                                                <span class="fs-12 text-decoration-line-through"><del>Rs.
                                                                                         {{ number_format($product->price, 2) }}</del></span>
                                                                             </h5>
                                                                         @else
-                                                                            <h5 class="mb-0 fw-500  text-light ">
+                                                                            <h5 class="mb-0 fw-500 ">
                                                                                 Rs.{{ number_format($after_discount, 2) }}
                                                                             </h5>
                                                                         @endif
                                                                     @else
-                                                                        <h5 class="mb-0  fw-500 text-light ">
+                                                                        <h5 class="mb-0  fw-500 ">
                                                                             Rs.{{ number_format($product->display_price) }}
-                                                                            <span class=" text-light fs-12 text-decoration-line-through"><del>Rs.
+                                                                            <span class=" fs-12 text-decoration-line-through"><del>Rs.
                                                                                     {{ number_format($product->price, 2) }}</del></span>
                                                                         </h5>
                                                                     @endif
@@ -240,7 +249,7 @@
                                                     $photo = explode(',', $product->product->photo);
                                                 @endphp
                                                 <div class="col-sm-12 col-md-4 col-lg-3 mb-3">
-                                                    <div class="card text-light shadow-lg overflow-hidden element-item rounded-4 p-0 h-100 w-100" style="background-color:rgb(0,0,0)">
+                                                    <div class="card shadow-lg overflow-hidden element-item rounded-4 p-0 h-100 w-100">
                                                         <div class="gallery-product overflow-hidden">
                                                             <a href="{{ route('product-detail', [$product->product->slug, $product->id]) }}">
                                                                 <img src="{{ $photo[0] }}" alt="{{ $photo[0] }}"
@@ -286,7 +295,7 @@
                                                             <div>
                                                                 <a href="{{ route('product-detail', [$product->product->slug, $product->id]) }}"
                                                                     class="w-100" style="white-space: unset;">
-                                                                    <h6 class="fs-16 fw-500 mb-3 lh-base truncate-text text-light ">
+                                                                    <h6 class="fs-16 fw-500 mb-3 lh-base truncate-text ">
                                                                         {{ $product->product->title }}
                                                                     </h6>
                                                                 </a>
@@ -296,20 +305,20 @@
                                                                 @endphp
                                                                 {{-- @if ($product->display_price == $product->price)
                                                                     @if ($product->discount > 0)
-                                                                        <h5 class="mb-0  fw-500 text-light ">
+                                                                        <h5 class="mb-0  fw-500 ">
                                                                             Rs.{{ number_format($after_discount, 2) }}
-                                                                            <span class=" text-light fs-12 text-decoration-line-through"><del>Rs.
+                                                                            <span class=" fs-12 text-decoration-line-through"><del>Rs.
                                                                                     {{ number_format($product->price, 2) }}</del></span>
                                                                         </h5>
                                                                     @else
-                                                                        <h5 class="mb-0 fw-500 text-light ">
+                                                                        <h5 class="mb-0 fw-500">
                                                                             Rs.{{ number_format($after_discount, 2) }}
                                                                         </h5>
                                                                     @endif
                                                                 @else
-                                                                    <h5 class="mb-0  fw-500 text-light ">
+                                                                    <h5 class="mb-0  fw-500 ">
                                                                         Rs.{{ number_format($product->display_price) }}
-                                                                        <span class="text-light fs-12 text-decoration-line-through"><del>Rs.
+                                                                        <span class="fs-12 text-decoration-line-through"><del>Rs.
                                                                                 {{ number_format($product->price, 2) }}</del></span>
                                                                     </h5>
                                                                 @endif --}}
@@ -317,15 +326,15 @@
                                                                 @if ($product->stock <= 0)
                                                                     <div class="d-inline">
                                                                         <h4 class="fw-500 d-inline text-danger">Out of stock</h4>
-                                                                        <h5 class=" text-light d-inline fw-500">Rs.{{ $product->price }}
+                                                                        <h5 class=" d-inline fw-500">Rs.{{ $product->price }}
                                                                         </h5>
                                                                     </div>
                                                                 @else
                                                                     @if ($product->display_price == $product->price)
                                                                         @if ($product->discount > 0)
-                                                                            <h5 class="mb-0  fw-500 text-light ">
+                                                                            <h5 class="mb-0  fw-500  ">
                                                                                 Rs.{{ number_format($after_discount, 2) }}
-                                                                                <span class=" text-light fs-12 text-decoration-line-through"><del>Rs.
+                                                                                <span class=" fs-12 text-decoration-line-through"><del>Rs.
                                                                                         {{ number_format($product->price, 2) }}</del></span>
                                                                             </h5>
                                                                         @else
@@ -334,9 +343,9 @@
                                                                             </h5>
                                                                         @endif
                                                                     @else
-                                                                        <h5 class="mb-0  fw-500 text-light ">
+                                                                        <h5 class="mb-0  fw-500  ">
                                                                             Rs.{{ number_format($product->display_price) }}
-                                                                            <span class=" text-light fs-12 text-decoration-line-through"><del>Rs.
+                                                                            <span class=" fs-12 text-decoration-line-through"><del>Rs.
                                                                                     {{ number_format($product->price, 2) }}</del></span>
                                                                         </h5>
                                                                     @endif
@@ -352,7 +361,7 @@
                 @endif
             </div>
             <div class="allProductButton  text-center mb-md-5 mt-4 mt-md-0">
-                <a href="/" class="link-dark link-effect border-bottom border-black ">Shop All Products</a>
+                <a href="/" class="link-dark  link-effect border-bottom border-white text-light ">Shop All Products</a>
             </div>
         </div>
 </section>
@@ -495,14 +504,14 @@
 @endif -->
 
 <!-- Start Special Offer -->
-<section class="py-5" id="shopbyproducttype">
+<section class="py-5" style="background-color: black;" id="shopbyproducttype">
     <div class="container">
 
         <div class="row justify-content-center">
-            <div class="col text-center">
-                <h2 class="display-6">Because you need time for yourself.</h2>
-                <h2 class="display-6 mb-4"> Blend beauty in you</h2>
-                <a href="/" class="link-dark link-effect border-bottom border-black mb-5">Shop All Products</a>
+            <div class="col text-center text-light">
+                <h2 class="display-6 text-light">Because you need time for yourself.</h2>
+                <h2 class="display-6 mb-4 text-light"> Blend beauty in you</h2>
+                <a href="/" class="link-dark link-effect border-bottom border-black mb-5 text-light">Shop All Products</a>
                 <h2> </h2>
             </div>
         </div>
@@ -529,7 +538,7 @@
                                         $photo = explode(',', $product->product->photo);
                                     @endphp
                                     <div class="col-12 col-md-4 col-lg-3 mb-3" >
-                                        <div class="card text-light shadow-lg overflow-hidden element-item rounded-5 p-0 h-100 w-100" style="background-color:rgb(0,0,0)">
+                                        <div class="card shadow-lg overflow-hidden element-item rounded-5 p-0 h-100 w-100">
                                             <div class="gallery-product overflow-hidden">
                                                 <a href="{{ route('product-detail', [$product->product->slug, $product->id]) }}">
                                                     <img src="{{ $photo[0] }}" alt="{{ $photo[0] }}"
@@ -576,7 +585,7 @@
                                                 <div>
 
                                                     <a href="{{ route('product-detail', [$product->product->slug, $product->id]) }}">
-                                                        <h6 class="fs-16 fw-500 mb-3 lh-base truncate-text text-wrap text-light">
+                                                        <h6 class="fs-16 fw-500 mb-3 lh-base truncate-text text-wrap">
                                                             {{ $product->product->title }}
                                                         </h6>
                                                     </a>
@@ -584,8 +593,8 @@
                                                         $after_discount =
                                                             $product->price - ($product->price * $product->discount) / 100;
                                                     @endphp
-                                                    <h5 class="mb-0 text-light">Rs.{{ number_format($after_discount, 2) }}
-                                                        <span class="text-light fs-12 text-decoration-line-through"><del>Rs.
+                                                    <h5 class="mb-0 ">Rs.{{ number_format($after_discount, 2) }}
+                                                        <span class="fs-12 text-decoration-line-through"><del>Rs.
                                                                 {{ number_format($product->price, 2) }}</del></span>
                                                     </h5>
                                                 </div>
@@ -608,7 +617,7 @@
                                                     $photo = explode(',', $product->product->photo);
                                                 @endphp
                                                 <div class="col-6 col-md-4 col-lg-3 mb-3">
-                                                    <div class="card text-light shadow-lg overflow-hidden element-item rounded-5 p-0 h-100 w-100"  style="background-color:rgb(0,0,0)">
+                                                    <div class="card  shadow-lg overflow-hidden element-item rounded-5 p-0 h-100 w-100">
                                                         <div class="gallery-product overflow-hidden" style="">
                                                             <a href="{{ route('product-detail', [$product->product->slug, $product->id]) }}">
                                                                 <img src="{{ $photo[0] }}" alt="{{ $photo[0] }}"
@@ -655,7 +664,7 @@
                                                             <div>
 
                                                                 <a href="{{ route('product-detail', [$product->product->slug, $product->id]) }}">
-                                                                    <h6 class="fs-16 fw-500 mb-3 lh-base truncate-text text-wrap text-light">
+                                                                    <h6 class="fs-16 fw-500 mb-3 lh-base truncate-text text-wrap ">
                                                                         {{ $product->product->title }}
                                                                     </h6>
                                                                 </a>
@@ -665,18 +674,18 @@
                                                                 @endphp
                                                                 @if ($product->display_price == $product->price)
                                                                     @if ($product->discount > 0)
-                                                                        <h5 class="mb-0  fw-500 text-light">
+                                                                        <h5 class="mb-0  fw-500 ">
                                                                             Rs.{{ number_format($after_discount, 2) }}
                                                                             <span class="text-muted fs-12 text-decoration-line-through"><del>Rs.
                                                                                     {{ number_format($product->price, 2) }}</del></span>
                                                                         </h5>
                                                                     @else
-                                                                        <h5 class="mb-0 fw-500 text-light">
+                                                                        <h5 class="mb-0 fw-500 ">
                                                                             Rs.{{ number_format($after_discount, 2) }}
                                                                         </h5>
                                                                     @endif
                                                                 @else
-                                                                    <h5 class="mb-0  fw-500 text-light">
+                                                                    <h5 class="mb-0  fw-500 ">
                                                                         Rs.{{ number_format($product->display_price) }}
                                                                         <span class="text-muted fs-12 text-decoration-line-through"><del>Rs.
                                                                                 {{ number_format($product->price, 2) }}</del></span>
@@ -698,7 +707,7 @@
 
 <!-- testimonial start -->
 @if ($testimonial)
-    <section class="section pt-4 bg-dark bg-opacity-50 ">
+    <section class="section pt-4 ">
         <div class="container-fluid">
 
             <h2 class="display-6 mt-3 mb-4 text-center"> <b> Over 2,000 Happy reviews</b></h2>
@@ -709,7 +718,7 @@
                         <div class="swiper-wrapper">
 
                             @foreach ($testimonial as $testimonials)
-                                <div class="card card-animate swiper-slide shadow-lg br-5 bg-light" style="width: 18rem;">
+                                <div class="card card-animate swiper-slide shadow-lg br-5 text-light" style="width: 18rem; background-color:black">
                                     <div class="card-body ml-100 p-0">
                                         <!-- style="text-align:center;border:2px solid white;border-radius:50%;" -->
                                         <div class="pt-10 ml-100" style="width:100%;">
@@ -720,8 +729,8 @@
                                             </div>
                                         </div>
                                         <div class="client-desc p-4 ">
-                                            <div class="flex-grow-11 mb-3 ">
-                                                <h4 class=" fw-500 mb-1 text-capitalize">{{ $testimonials->title }}
+                                            <div class="flex-grow-11 mb-3 text-light ">
+                                                <h4 class=" fw-500 mb-1 text-capitalize text-light">{{ $testimonials->title }}
                                                 </h4>
                                                 <div class="mb-2 text-warning">
                                                     <i class="bi bi-star-fill fs-caption"></i>
@@ -731,7 +740,7 @@
                                                     <i class="bi bi-star-fill fs-caption"></i>
                                                 </div>
                                             </div>
-                                            <p class="mb-0 fs-16 text-start">{!! $testimonials->description !!}</p>
+                                            <p class="mb-0 fs-16 text-start text-light">{!! $testimonials->description !!}</p>
 
 
                                         </div>
@@ -751,21 +760,10 @@
     </section>
 @endif
 
-<section class="pt-5 ">
-    <div class="container justify-content-center align-items-center gap-3 d-lg-flex">
-        @foreach ($info as $item)
-            <div
-                class="show-cards rounded-pill border border-opacity-50 border-dark d-flex px-3 py-2 align-items-center mt-2">
-                <div href="/" class=" btn-icon btn-show  btn-sm  rounded-circle shadow-lg"><i class="bi bi-check fs-2"></i>
-                </div>
-                <h5 class="ps-2 pr-4">{{ $item->info }}</h5>
-            </div>
-        @endforeach
-    </div>
-</section>
+
 
 @if (isset($story))
-    <section class="section mt-3">
+    <section class="section mt-3" style="background-color: black;">
         <div class="container-fluid">
             <div class="row align-items-center  gap-md-5">
                 <div class="col-12 col-sm-5">
@@ -776,16 +774,18 @@
                 <div class="col-12 col-sm-6">
 
                     <div class="section-content">
-                        <h2 class="display-6 mt-4 mt-md-0 mb-3 "> <b>Our Story</b> </h2>
+                        <h2 class="display-6 mt-4 mt-md-0 mb-3 text-light"> <b>Our Story</b> </h2>
 
-                        <h2 class="title text-capitalize lh-base fw-normal  my-3">{{ $story->title }}</h2>
-                        <p class="text-muted">{!! html_entity_decode($story->description) !!} </p>
+                        <h2 class="title text-capitalize lh-base fw-normal text-light my-3">{{ $story->title }}</h2>
+                        <p class="text-light">{!! html_entity_decode($story->description) !!} </p>
 
                     </div>
                 </div><!--end col-->
             </div><!--end row-->
         </div><!--end container-->
     </section>
+
+    @include('frontend.layouts.newsletter')
 @endif
 <!-- @if ($certified)
     <section class="ecommerce-about-team1 py-3 bg-dark bg-opacity-50">

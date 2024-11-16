@@ -76,13 +76,13 @@
 
 .nav-pills {
   .nav-link {
-    @include border-radius($nav-pills-border-radius);
+    color: #AAAAAA;
   }
 
   .nav-link.active,
   .show > .nav-link {
     color: $nav-pills-link-active-color;
-    background-color: $nav-pills-link-active-bg;
+    background-color: white;
   }
 }
 
