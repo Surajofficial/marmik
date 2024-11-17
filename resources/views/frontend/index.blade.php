@@ -511,7 +511,7 @@
             <div class="col text-center text-light">
                 <h2 class="display-6 text-light">Because you need time for yourself.</h2>
                 <h2 class="display-6 mb-4 text-light"> Blend beauty in you</h2>
-                <a href="/" class="link-dark link-effect border-bottom border-black mb-5 text-light">Shop All Products</a>
+                <a href="/" class=" link-effect border-bottom border-black mb-5 text-light">Shop All Products</a>
                 <h2> </h2>
             </div>
         </div>

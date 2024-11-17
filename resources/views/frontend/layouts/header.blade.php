@@ -72,7 +72,7 @@
             <a class="navbar-brand  " href="{{ route('home') }}">
                 <div class="logo-dark">
                     <img src="@foreach ($settings as $data) {{ $data->logo }} @endforeach" alt="logo"
-                        class="logo w-50">
+                        class="logo">
                 </div>
                 <div class="logo-light">
                     <img src="@foreach ($settings as $data) {{ $data->logo }} @endforeach" alt="logo"
