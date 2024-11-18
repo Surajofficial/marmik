@@ -15,7 +15,7 @@
         <div class="row align-items-center justify-content-between">
             <div class="col-lg-12">
                 <div>
-                    <p class="fs-15 text-uppercase fw-medium text-center "> <span class="fw-semibold "> Dr.
+                    <p class="fs-15 text-uppercase fw-medium text-center "> <span class="fw-semibold "> 
                             Marmik</span>
                         Newsletter</p>
                     <h1 class="lh-base text-capitalize mb-3"></h1>

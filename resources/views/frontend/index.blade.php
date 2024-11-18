@@ -88,7 +88,7 @@
         }
     }
 </style>
-<section class="position-relative p-0" style="margin-top: 5rem !important">
+<section class="position-relative p-0">
     <div class="swiper-container mt-2" id="homepage_slider">
         <div class="swiper-wrapper">
 

@@ -560,8 +560,6 @@
                             </div>
                         </div>
 
-
-                </div>
             </div>
 
             <div class="mb-3">
@@ -580,8 +578,9 @@
             <!--/ End Form -->
         @endauth
     </div>
+    </div></div>
 
-    <section class="section" style="background-color: black;">
+    <section class="section" style="background-color:black">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-12">
@@ -599,8 +598,8 @@
                     @if (($data->id != $product_detail->id) )
                         <div class="col-xxl-3 col-lg-4 col-sm-6">
                             <div
-                                class="card ecommerce-product-widgets border-0 rounded-0 shadow-none overflow-hidden card-animate">
-                                <div class=" bg-opacity-50 rounded py-4 position-relative">
+                                class="card ecommerce-product-widgets border-0 rounded-4 shadow-none overflow-hidden card-animate">
+                                <div class="rounded py-4 position-relative">
                                     @php
                                         $photo = explode(',', $data->product->photo);
                                         // dd($data);

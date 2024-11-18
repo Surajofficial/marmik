@@ -70,9 +70,9 @@
                 <div class="footer-info">
 
                     <img src="@foreach ($settings as $data) {{ $data->logo }} @endforeach" alt="logo"
-                        class="logo-light logo w-50">
+                        class="logo-light logo">
                     <img src="@foreach ($settings as $data) {{ $data->logo }} @endforeach" alt="logo"
-                        class="logo-dark logo w-50">
+                        class="logo-dark logo">
 
                     <p class="footer-desc mt-4 mb-2 me-3 fw-light lh-lg text-justify-center text-light">
                         @foreach ($settings as $data)
@@ -90,10 +90,10 @@
                                 <a href="@foreach ($settings as $data) {{ @$data->instagram }} @endforeach"
                                     class="text-reset"><i class="mdi mdi-instagram text-light"></i></a>
                             </li>
-                            <li class="list-inline-item">
+                            <!-- <li class="list-inline-item">
                                 <a href="@foreach ($settings as $data) {{ @$data->youtube }} @endforeach"
                                     class="text-reset"><i class="mdi mdi-youtube text-light"></i></a>
-                            </li>
+                            </li> -->
                         </ul>
                     </div>
                 </div>
