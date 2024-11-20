@@ -164,12 +164,12 @@
         </div>
 
         <div class="row footer-border-alt mt-4 align-items-center">
-            <div class="col-sm-6">
+            <!-- <div class="col-sm-6">
                 <script>
                     document.write(new Date().getFullYear())
                 </script> Design &amp; Develop by <a href="/" target="_blank"
                     class="text-reset text-decoration-underline text-light">Avni</a>
-            </div>
+            </div> -->
             <div class="col-sm-6">
                 <div class="text-sm-end d-none d-sm-block">
                     <ul class="list-inline mb-0">
