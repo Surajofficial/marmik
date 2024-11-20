@@ -205,26 +205,26 @@
                                                                 @if ($product->stock <= 0)
                                                                     <div class="d-inline">
                                                                         <h4 class="fw-500 d-inline text-danger">Out of stock</h4>
-                                                                        <h5 class=" d-inline fw-500">Rs.{{ $product->price }}
+                                                                        <h5 class=" d-inline fw-500">₹{{ $product->price }}
                                                                         </h5>
                                                                     </div>
                                                                 @else
                                                                     @if ($product->display_price == $product->price)
                                                                         @if ($product->discount > 0)
                                                                             <h5 class="mb-0  fw-500">
-                                                                                Rs.{{ number_format($after_discount, 2) }}
-                                                                                <span class="fs-12 text-decoration-line-through"><del>Rs.
+                                                                                ₹{{ number_format($after_discount, 2) }}
+                                                                                <span class="fs-12 text-decoration-line-through"><del>₹
                                                                                         {{ number_format($product->price, 2) }}</del></span>
                                                                             </h5>
                                                                         @else
                                                                             <h5 class="mb-0 fw-500 ">
-                                                                                Rs.{{ number_format($after_discount, 2) }}
+                                                                                ₹{{ number_format($after_discount, 2) }}
                                                                             </h5>
                                                                         @endif
                                                                     @else
                                                                         <h5 class="mb-0  fw-500 ">
-                                                                            Rs.{{ number_format($product->display_price) }}
-                                                                            <span class=" fs-12 text-decoration-line-through"><del>Rs.
+                                                                            ₹{{ number_format($product->display_price) }}
+                                                                            <span class=" fs-12 text-decoration-line-through"><del>₹
                                                                                     {{ number_format($product->price, 2) }}</del></span>
                                                                         </h5>
                                                                     @endif
@@ -306,19 +306,19 @@
                                                                 {{-- @if ($product->display_price == $product->price)
                                                                     @if ($product->discount > 0)
                                                                         <h5 class="mb-0  fw-500 ">
-                                                                            Rs.{{ number_format($after_discount, 2) }}
-                                                                            <span class=" fs-12 text-decoration-line-through"><del>Rs.
+                                                                            ₹{{ number_format($after_discount, 2) }}
+                                                                            <span class=" fs-12 text-decoration-line-through"><del>₹
                                                                                     {{ number_format($product->price, 2) }}</del></span>
                                                                         </h5>
                                                                     @else
                                                                         <h5 class="mb-0 fw-500">
-                                                                            Rs.{{ number_format($after_discount, 2) }}
+                                                                            ₹{{ number_format($after_discount, 2) }}
                                                                         </h5>
                                                                     @endif
                                                                 @else
                                                                     <h5 class="mb-0  fw-500 ">
-                                                                        Rs.{{ number_format($product->display_price) }}
-                                                                        <span class="fs-12 text-decoration-line-through"><del>Rs.
+                                                                        ₹{{ number_format($product->display_price) }}
+                                                                        <span class="fs-12 text-decoration-line-through"><del>₹
                                                                                 {{ number_format($product->price, 2) }}</del></span>
                                                                     </h5>
                                                                 @endif --}}
@@ -326,26 +326,26 @@
                                                                 @if ($product->stock <= 0)
                                                                     <div class="d-inline">
                                                                         <h4 class="fw-500 d-inline text-danger">Out of stock</h4>
-                                                                        <h5 class=" d-inline fw-500">Rs.{{ $product->price }}
+                                                                        <h5 class=" d-inline fw-500">₹{{ $product->price }}
                                                                         </h5>
                                                                     </div>
                                                                 @else
                                                                     @if ($product->display_price == $product->price)
                                                                         @if ($product->discount > 0)
                                                                             <h5 class="mb-0  fw-500  ">
-                                                                                Rs.{{ number_format($after_discount, 2) }}
-                                                                                <span class=" fs-12 text-decoration-line-through"><del>Rs.
+                                                                                ₹{{ number_format($after_discount, 2) }}
+                                                                                <span class=" fs-12 text-decoration-line-through"><del>₹
                                                                                         {{ number_format($product->price, 2) }}</del></span>
                                                                             </h5>
                                                                         @else
                                                                             <h5 class="mb-0 fw-500">
-                                                                                Rs.{{ number_format($after_discount, 2) }}
+                                                                                ₹{{ number_format($after_discount, 2) }}
                                                                             </h5>
                                                                         @endif
                                                                     @else
                                                                         <h5 class="mb-0  fw-500  ">
-                                                                            Rs.{{ number_format($product->display_price) }}
-                                                                            <span class=" fs-12 text-decoration-line-through"><del>Rs.
+                                                                            ₹{{ number_format($product->display_price) }}
+                                                                            <span class=" fs-12 text-decoration-line-through"><del>₹
                                                                                     {{ number_format($product->price, 2) }}</del></span>
                                                                         </h5>
                                                                     @endif
@@ -593,8 +593,8 @@
                                                         $after_discount =
                                                             $product->price - ($product->price * $product->discount) / 100;
                                                     @endphp
-                                                    <h5 class="mb-0 ">Rs.{{ number_format($after_discount, 2) }}
-                                                        <span class="fs-12 text-decoration-line-through"><del>Rs.
+                                                    <h5 class="mb-0 ">₹{{ number_format($after_discount, 2) }}
+                                                        <span class="fs-12 text-decoration-line-through"><del>₹
                                                                 {{ number_format($product->price, 2) }}</del></span>
                                                     </h5>
                                                 </div>
@@ -675,19 +675,19 @@
                                                                 @if ($product->display_price == $product->price)
                                                                     @if ($product->discount > 0)
                                                                         <h5 class="mb-0  fw-500 ">
-                                                                            Rs.{{ number_format($after_discount, 2) }}
-                                                                            <span class="text-muted fs-12 text-decoration-line-through"><del>Rs.
+                                                                            ₹{{ number_format($after_discount, 2) }}
+                                                                            <span class="text-muted fs-12 text-decoration-line-through"><del>₹
                                                                                     {{ number_format($product->price, 2) }}</del></span>
                                                                         </h5>
                                                                     @else
                                                                         <h5 class="mb-0 fw-500 ">
-                                                                            Rs.{{ number_format($after_discount, 2) }}
+                                                                            ₹{{ number_format($after_discount, 2) }}
                                                                         </h5>
                                                                     @endif
                                                                 @else
                                                                     <h5 class="mb-0  fw-500 ">
-                                                                        Rs.{{ number_format($product->display_price) }}
-                                                                        <span class="text-muted fs-12 text-decoration-line-through"><del>Rs.
+                                                                        ₹{{ number_format($product->display_price) }}
+                                                                        <span class="text-muted fs-12 text-decoration-line-through"><del>₹
                                                                                 {{ number_format($product->price, 2) }}</del></span>
                                                                     </h5>
                                                                 @endif

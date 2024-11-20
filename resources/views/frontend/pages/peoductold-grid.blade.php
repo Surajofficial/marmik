@@ -252,13 +252,13 @@
 
             function getAfterDiscountElement(data, afterDiscount, isCompact = false) {
                 return isCompact ?
-                    `<h5 class="mb-0">Rs.${afterDiscount.toFixed(2)} <span class="text-muted fs-12 text-decoration-line-through"><del>MRP Rs. ${data.price}</del></span></h5>` :
-                    `<h5 class="text-secondary text-danger mb-0">Rs. ${afterDiscount.toFixed(2)} <span class="text-muted fs-12 text-decoration-line-through"><del>MRP Rs. ${data.price}</del></span></h5>`;
+                    `<h5 class="mb-0">₹${afterDiscount.toFixed(2)} <span class="text-muted fs-12 text-decoration-line-through"><del>MRP ₹ ${data.price}</del></span></h5>` :
+                    `<h5 class="text-secondary text-danger mb-0">₹ ${afterDiscount.toFixed(2)} <span class="text-muted fs-12 text-decoration-line-through"><del>MRP ₹ ${data.price}</del></span></h5>`;
             }
 
             function getRegularPriceElement(data, isCompact = false) {
-                return isCompact ? `<h5 class="mb-0">Rs.${data.price}</h5>` :
-                    `<h5 class="text-secondary mb-0">Rs. ${data.price}</h5>`;
+                return isCompact ? `<h5 class="mb-0">₹${data.price}</h5>` :
+                    `<h5 class="text-secondary mb-0">₹ ${data.price}</h5>`;
             }
 
             function getButtonElement(data) {

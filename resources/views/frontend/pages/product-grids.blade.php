@@ -180,11 +180,11 @@
     //                             <h6 class="fs-16 fw-500 mb-3 lh-base text-wrap">${data.title.substring(0,40)}${data.title.length>20?'...':''}</h6>
     //                         </a>
     //                         <div class="mt-3">
-    //                             ${stockMessage} Rs. ${(data.max_price_variant.price - (data.max_price_variant.price * data.max_price_variant.discount / 100)).toFixed(2)}
+    //                             ${stockMessage} ₹ ${(data.max_price_variant.price - (data.max_price_variant.price * data.max_price_variant.discount / 100)).toFixed(2)}
                               
     //                             ${data.max_price_variant.discount > 0 ? `
     //                                 <span class="text-muted fs-12 text-decoration-line-through">
-    //                                     <del>MRP Rs. ${data.max_price_variant.price}</del>
+    //                                     <del>MRP ₹ ${data.max_price_variant.price}</del>
     //                                 </span>
     //                             ` : ''}
     //                         </div>
@@ -332,13 +332,13 @@
 
     function getAfterDiscountElement(data, afterDiscount, isCompact = false) {
         return isCompact ?
-            `<h5 class="mb-0 ">Rs.${afterDiscount.toFixed(2)} <span class="text-muted fs-12 text-decoration-line-through"><del>MRP Rs. ${data.price}</del></span></h5>` :
-            `<h5 class="text-secondary text-danger mb-0">Rs. ${afterDiscount.toFixed(2)} <span class="text-muted fs-12 text-decoration-line-through"><del>MRP Rs. ${data.price}</del></span></h5>`;
+            `<h5 class="mb-0 ">₹${afterDiscount.toFixed(2)} <span class="text-muted fs-12 text-decoration-line-through"><del>MRP ₹ ${data.price}</del></span></h5>` :
+            `<h5 class="text-secondary text-danger mb-0">₹ ${afterDiscount.toFixed(2)} <span class="text-muted fs-12 text-decoration-line-through"><del>MRP ₹ ${data.price}</del></span></h5>`;
     }
 
     function getRegularPriceElement(data, isCompact = false) {
-        return isCompact ? `<h5 class="mb-0">Rs.${data.price}</h5>` :
-            `<h5 class="text-secondary mb-0">Rs. ${data.price}</h5>`;
+        return isCompact ? `<h5 class="mb-0">₹${data.price}</h5>` :
+            `<h5 class="text-secondary mb-0">₹ ${data.price}</h5>`;
     }
 
     function getButtonElement(data) {

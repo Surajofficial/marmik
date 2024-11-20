@@ -139,7 +139,7 @@
 					
 						<div class="col-lg-4">
 							<div class="form-group">
-								<label>Openinng Balance (Rs.)<span class="text-danger">*</span></label>
+								<label>Openinng Balance (₹)<span class="text-danger">*</span></label>
 								<input value="{{$supplier->opening ?? old('opening')}}" class="form-control" type="text" name="opening">
 								
 							</div>

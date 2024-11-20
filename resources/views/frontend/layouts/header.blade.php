@@ -374,7 +374,7 @@
                                     (3 Reward Points for every ₹100 spent)</span></p>
                             <h3>Way To Order</h3>
                             <p>1. Order Discount<span>
-                                    (1 Reward Point = Rs. 1)</span></p>
+                                    (1 Reward Point = ₹ 1)</span></p>
 
                         </div>
 

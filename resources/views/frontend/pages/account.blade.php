@@ -261,11 +261,11 @@
                                                                 <h4 class="text-danger">Out of stock</h4>
                                                             @else
                                                                 <h5>
-                                                                    Rs.{{ number_format($after_discount, 2) }}
+                                                                    ₹{{ number_format($after_discount, 2) }}
                                                                     @if ($product->discount > 0)
                                                                         <span
                                                                             class="text-danger text-decoration-line-through">
-                                                                            Rs.{{ number_format($product->price, 2) }}
+                                                                            ₹{{ number_format($product->price, 2) }}
                                                                         </span>
                                                                     @endif
                                                                 </h5>
@@ -342,7 +342,7 @@
                                                             <td><span class="text-muted">{{ $order->created_at }}</span>
                                                             </td>
                                                             <td class="fw-medium">
-                                                                Rs.{{ number_format($order->total_amount, 2) }}</td>
+                                                                ₹{{ number_format($order->total_amount, 2) }}</td>
 
                                                             <td>
                                                                 @if ($order->status == 'new')

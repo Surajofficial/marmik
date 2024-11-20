@@ -146,7 +146,7 @@
                                             $ {{ number_format($data, 2) }}
                                         @endforeach
                                     </td>
-                                    <td>Rs.{{ number_format($order->total_amount, 2) }}</td>
+                                    <td>₹{{ number_format($order->total_amount, 2) }}</td>
                                     @if (isset($order->priscription) || $order->priscription != '')
                                         <td><a href="../assets/prescription/{{ $order->priscription }}"
                                                 target="_blank"><img

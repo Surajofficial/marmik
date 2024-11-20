@@ -146,7 +146,7 @@
                     <input type="hidden" name="priscription" value="{{ $data['presc'] }}" />
                 @endif
                 <input type="hidden" name="payment_method" value="online" />
-                <button type="submit" class="razorpay-payment-button btn btn-success rounded-pill">Pay Amount Rs.
+                <button type="submit" class="razorpay-payment-button btn btn-success rounded-pill">Pay Amount ₹
                     {{ number_format($price / 100, 2) }}</button>
             </form>
         </div><!--end container-->

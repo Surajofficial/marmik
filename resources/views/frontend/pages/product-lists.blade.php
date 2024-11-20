@@ -328,10 +328,10 @@ function loadProductList(datas, page) {
                 var afterDiscount = datas[i].price - (datas[i].price * discount / 100);
                 if (discount > 0) {
                     var discountElem = '<div class="ribbon ribbon-danger ribbon-shape">'+ datas[i].discount + ' % OFF</div>';
-                    var afterDiscountElem = '<h5 class="text-secondary mb-0">Rs.' + afterDiscount.toFixed(2) + ' <span class="text-muted fs-13"><del>MRP Rs.' + datas[i].price + '</del></span></h5>'
+                    var afterDiscountElem = '<h5 class="text-secondary mb-0">₹' + afterDiscount.toFixed(2) + ' <span class="text-muted fs-13"><del>MRP ₹' + datas[i].price + '</del></span></h5>'
                 } else {
                     var discountElem = '';
-                    var afterDiscountElem = '<h5 class="text-secondary mb-0">Rs.' + datas[i].price + '</h5>'
+                    var afterDiscountElem = '<h5 class="text-secondary mb-0">₹' + datas[i].price + '</h5>'
                 }
 
                 if (document.getElementById("layout-noSidebar")) {

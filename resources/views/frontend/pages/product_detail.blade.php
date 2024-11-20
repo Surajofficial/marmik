@@ -197,20 +197,20 @@
                                 @endphp
                                 <h5 class="fs-24 mb-2 fw-500 mt-2">
                                     @if ($product->display_price == $product->price)
-                                        <span id="price">Rs. {{ number_format($after_discount, 2) }}</span>
+                                        <span id="price">₹ {{ number_format($after_discount, 2) }}</span>
                                         @if ($product->discount > 0)
                                             <span class="text-muted fs-14 text-decoration-line-through">
-                                                <del id="dprice">Rs. {{ number_format($product->price, 2) }}</del>
+                                                <del id="dprice">₹ {{ number_format($product->price, 2) }}</del>
                                             </span>
                                             <span class="fs-14 ms-2 text-success" id="discount">
                                                 ({{ $product->discount }}% off)
                                             </span>
                                         @endif
                                     @else
-                                        <span id="price">Rs. {{ number_format($product->display_price, 2) }}</span>
+                                        <span id="price">₹ {{ number_format($product->display_price, 2) }}</span>
                                         @if ($product->discount > 0)
                                             <span class="text-muted fs-14 text-decoration-line-through">
-                                                <del id="dprice">Rs. {{ number_format($product->price, 2) }}</del>
+                                                <del id="dprice">₹ {{ number_format($product->price, 2) }}</del>
                                             </span>
                                         @endif
                                     @endif
@@ -640,7 +640,7 @@
                                         @endphp
                                         <span class="float-end">4.1 <i
                                                 class="ri-star-half-fill text-warning align-bottom"></i></span>
-                                        <h5 class="mb-0">Rs. {{ number_format($after_discount, 2) }}</h5>
+                                        <h5 class="mb-0">₹ {{ number_format($after_discount, 2) }}</h5>
                                     </div>
                                     <div class="mt-3">
                                         @if ($data->stock > 0)

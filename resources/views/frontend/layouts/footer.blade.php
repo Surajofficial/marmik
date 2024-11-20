@@ -90,6 +90,11 @@
                                 <a href="@foreach ($settings as $data) {{ @$data->instagram }} @endforeach"
                                     class="text-reset"><i class="mdi mdi-instagram text-light"></i></a>
                             </li>
+                            <li class="list-inline-item">
+                            <a href="https://api.whatsapp.com/send/?phone=7303582738&text=Hey+there%21&type=phone_number&app_absent=0"
+                            class="text-reset"><i
+                                    class="mdi mdi-whatsapp text-light "></i> </a>
+                            </li>
                             <!-- <li class="list-inline-item">
                                 <a href="@foreach ($settings as $data) {{ @$data->youtube }} @endforeach"
                                     class="text-reset"><i class="mdi mdi-youtube text-light"></i></a>
@@ -163,7 +168,7 @@
                 <script>
                     document.write(new Date().getFullYear())
                 </script> Design &amp; Develop by <a href="/" target="_blank"
-                    class="text-reset text-decoration-underline text-light">Awish</a>
+                    class="text-reset text-decoration-underline text-light">Avni</a>
             </div>
             <div class="col-sm-6">
                 <div class="text-sm-end d-none d-sm-block">
@@ -354,7 +359,7 @@
                                             <h5 class="fs-15"><a href="/product-detail/${product.slug}" target="_blank">${product.title}</a></h5>
                                         </a>
                                         <div class="d-flex mb-3 gap-2">
-                                            <div class="text-muted fw-medium mb-0">Rs. <span class="product-price">${data.amount.toFixed(2)}</span></div>
+                                            <div class="text-muted fw-medium mb-0">₹ <span class="product-price">${data.amount.toFixed(2)}</span></div>
                                             <div class="vr"></div>
                                             <span class="text-success fw-medium">In Stock</span>
                                         </div>
@@ -382,7 +387,7 @@
                                             <i class="ri-close-fill fs-16"></i>
                                         </button>
                                         <div class="fw-medium mb-0 fs-16 price-hide">
-                                            Rs.<span class="product-line-price">${totalPrice}</span>
+                                            ₹<span class="product-line-price">${totalPrice}</span>
                                         </div>
                                     </div>
                                 </div>
@@ -390,7 +395,7 @@
                         `;
                     $('#cart-list').append(listItem);
                 });
-                $('#total').text(`Rs. ${data.total}`);
+                $('#total').text(`₹ ${data.total}`);
             },
             error: function(error) {
                 console.log('Error:', error);

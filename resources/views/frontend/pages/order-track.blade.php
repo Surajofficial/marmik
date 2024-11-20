@@ -87,7 +87,7 @@
                         <!--end col-->
                         <div class="col-lg-3 col-6">
                             <p class="text-muted mb-2 text-uppercase fw-medium fs-12">Total Amount</p>
-                            <h5 class="fs-14 mb-0">Rs. <span id="total-amount">{{ $order->total_amount }}</span></h5>
+                            <h5 class="fs-14 mb-0">₹ <span id="total-amount">{{ $order->total_amount }}</span></h5>
                         </div>
                         <!--end col-->
                     </div><!--end row-->

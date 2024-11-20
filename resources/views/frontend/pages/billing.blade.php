@@ -240,7 +240,7 @@
                             Interest @ 24% p.a. will be charged after 30 days.<br />
                             Goods onces sold will not be taken back or exchanged.<br />
                             Our responsibility ceases as goods leave our place.<br />
-                            Rs. : One Thousand One Hundred Seventy-Six Only <br />
+                            ₹ : One Thousand One Hundred Seventy-Six Only <br />
                         </small>
                     </small>
                 </div>
