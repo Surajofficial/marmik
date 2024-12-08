@@ -1,9 +1,9 @@
 @extends('frontend.layouts.master')
 
-@section('title','Dr Awish || Order Track Page')
+@section('title', 'Marmik || Order Track Page')
 
 @section('main-content')
-<section class="page-wrapper bg-primary1">
+    <section class="page-wrapper bg-primary1">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
@@ -36,11 +36,14 @@
                             </div>
                             <div class="text-center mt-5 pt-1">
                                 <h4 class="mb-3 text-capitalize">Your Order Is Completed !</h4>
-                                <p class="text-muted mb-2">You will receive an order confirmation email with details of your order.</p>
-                                <p class="text-muted mb-0">Order Number: {{$order}}</p>
+                                <p class="text-muted mb-2">You will receive an order confirmation email with details of your
+                                    order.</p>
+                                <p class="text-muted mb-0">Order Number: {{ $order }}</p>
                                 <div class="mt-4 pt-2 hstack gap-2 justify-content-center">
-                                    <a href="{{route('account')}}" class="btn btn-primary btn-hover">View Order <i class="ri-arrow-right-line align-bottom ms-1"></i></a>
-                                    <a href="{{route('home')}}" class="btn btn-soft-danger btn-hover">Back To Home <i class="ri-home-4-line align-bottom ms-1"></i></a>
+                                    <a href="{{ route('account') }}" class="btn btn-primary btn-hover">View Order <i
+                                            class="ri-arrow-right-line align-bottom ms-1"></i></a>
+                                    <a href="{{ route('home') }}" class="btn btn-soft-danger btn-hover">Back To Home <i
+                                            class="ri-home-4-line align-bottom ms-1"></i></a>
                                 </div>
                             </div>
                         </div>

@@ -1,6 +1,6 @@
 @extends('frontend.layouts.master')
 
-@section('title', 'Dr. Awish || Book An Appointment')
+@section('title', 'Marmik || Book An Appointment')
 
 @section('main-content')
 

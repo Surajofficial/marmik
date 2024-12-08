@@ -1,6 +1,6 @@
 @extends('frontend.layouts.master')
 
-@section('title', 'Checkout Page')
+@section('title', 'Marmik || Checkout Page')
 
 @section('main-content')
     @php
@@ -46,7 +46,7 @@
 
                 </div>
             </div>
-            <hr/>
+            <hr />
             <form class="form" id="order" method="POST" action="{{ route('cart.order') }}"
                 enctype="multipart/form-data">
                 @csrf

@@ -11,7 +11,8 @@
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script defer src="{{ asset('js/static/face-api.min.js') }}"></script>
     <script defer src="{{ asset('js/static/script.js') }}"></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <style>
         body {
             margin: 0;
@@ -38,25 +39,23 @@
             align-items: center;
         }
 
-        .video{
+        .video {
             width: 100%;
             height: 100%;
             object-fit: cover;
         }
-
-
     </style>
 </head>
 
 <body>
     <div class="video-container">
-        <video class="video" id="video"  autoplay muted>
+        <video class="video" id="video" autoplay muted>
         </video>
-            <div class="pt-5" style="position: absolute; top:0">
-                <span id="btn-1" class="btn btn-danger rounded-pill" style="width: 300px;">Position: Not Good</span>
-                <span></span>
-            </div>
-            </div>
+        <div class="pt-5" style="position: absolute; top:0">
+            <span id="btn-1" class="btn btn-danger rounded-pill" style="width: 300px;">Position: Not Good</span>
+            <span></span>
+        </div>
+    </div>
 </body>
 
 </html>

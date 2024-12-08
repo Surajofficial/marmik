@@ -37,19 +37,6 @@
             border: 1px solid #000;
             background-color: #C0C0C0;
         }
-
-        /* td {
-            font-size: 10px;
-            border: 1px solid #000;
-            max-width: 15px;
-            padding: 0;
-            hyphens: auto;
-        }
-
-        #table_product th {
-            font-size: 10px;
-            border: 1px solid #000;
-        } */
     </style>
 </head>
 

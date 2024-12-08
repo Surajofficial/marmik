@@ -6,11 +6,6 @@
             <div class="row justify-content-center">
                 <div class="col-lg-6" style="margin-top: 60px;">
                     <div class="text-center">
-                        <!-- @if (isset($type[0]))
-    <h1 class="text-white mb-0">{{ $type[0]->title }} </h1>
-@else
-    <h1 class="text-white mb-0">Product </h1>
-    @endif -->
                         <nav aria-label="breadcrumb">
                             <ol class="breadcrumb  justify-content-center mt-4" style="color:black !important">
                                 <li class="breadcrumb-item"><a href="{{ URL::to('/') }}">Home</a></li>
@@ -103,8 +98,7 @@
                 </div>
 
                 <div class="col-lg-8">
-                    <div class="custom-form card p-4 p-lg-5   bg-dark bg-opacity-50 rounded-4"
-                        >
+                    <div class="custom-form card p-4 p-lg-5   bg-dark bg-opacity-50 rounded-4">
                         {{-- Error field add by Saurav --}}
                         <form class="" method="get" action="{{ route('contact.store') }}">
                             <div class="row">
@@ -120,7 +114,8 @@
                                         <input name="name" id="name" type="text" value="{{ old('name') }}"
                                             class="form-control rounded-pill" placeholder="Enter name">
                                         @if ($errors->has('name'))
-                                            <div class=" text-danger" style="padding-left: 10px; font-size:16px;">{{ $errors->first('name') }}</div>
+                                            <div class=" text-danger" style="padding-left: 10px; font-size:16px;">
+                                                {{ $errors->first('name') }}</div>
                                         @endif
                                     </div>
                                 </div>
@@ -131,7 +126,8 @@
                                         <input name="email" type="email" type="email" value="{{ old('email') }}"
                                             class="form-control rounded-pill" placeholder="Enter email">
                                         @if ($errors->has('email'))
-                                            <div class=" text-danger" style="padding-left: 10px; font-size:16px;">{{ $errors->first('email') }}</div>
+                                            <div class=" text-danger" style="padding-left: 10px; font-size:16px;">
+                                                {{ $errors->first('email') }}</div>
                                         @endif
                                     </div>
                                 </div>
@@ -143,7 +139,8 @@
                                             name="phone" type="text" value="{{ old('phone') }}"
                                             placeholder="Enter Your Phone..">
                                         @if ($errors->has('phone'))
-                                            <div class=" text-danger" style="padding-left: 10px; font-size:16px;">{{ $errors->first('phone') }}</div>
+                                            <div class=" text-danger" style="padding-left: 10px; font-size:16px;">
+                                                {{ $errors->first('phone') }}</div>
                                         @endif
                                     </div>
                                 </div>
@@ -155,7 +152,8 @@
                                             value="{{ old('subject') }}" name="subject" type="text"
                                             placeholder="Enter Subject..">
                                         @if ($errors->has('subject'))
-                                            <div class=" text-danger" style="padding-left: 10px; font-size:16px;">{{ $errors->first('subject') }}</div>
+                                            <div class=" text-danger" style="padding-left: 10px; font-size:16px;">
+                                                {{ $errors->first('subject') }}</div>
                                         @endif
                                     </div>
                                 </div>
@@ -166,7 +164,8 @@
                                         <textarea name="message" id="message" rows="4" class="form-control rounded-4"
                                             placeholder="Enter message..."></textarea>
                                         @if ($errors->has('message'))
-                                            <div class=" text-danger" style="padding-left: 10px; font-size:16px;">{{ $errors->first('message') }}</div>
+                                            <div class=" text-danger" style="padding-left: 10px; font-size:16px;">
+                                                {{ $errors->first('message') }}</div>
                                         @endif
                                     </div>
                                 </div>

@@ -1,6 +1,6 @@
 @extends('frontend.layouts.master')
 
-@section('title','Dr Awish || PRODUCT PAGE')
+@section('title','Marmik || PRODUCT PAGE')
 
 @section('main-content')
 	
@@ -131,7 +131,7 @@
 
 <script>
     console.log(<?php print_r($products); ?>);
-var productListData =<?php print_r($products); ?>
+    var productListData = <?php print_r($products); ?>
 // var productListData = [{
 //     'id': 1,
 //     "productImg": "../assets/images/products/img-10.png",

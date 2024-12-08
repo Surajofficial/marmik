@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>Current Location on Google Map</title>
+    <title>Marmik || Current Location on Google Map</title>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC28irS-FrqBuxwyjqrSiG9F9OiFIxWkLw"></script>
     <style>
         #map {

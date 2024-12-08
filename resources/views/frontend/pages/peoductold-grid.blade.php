@@ -1,6 +1,6 @@
     @extends('frontend.layouts.master')
 
-    @section('title', 'Dr Awish || PRODUCT PAGE')
+    @section('title', 'Marmik || PRODUCT PAGE')
 
     @section('main-content')
 

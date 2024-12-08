@@ -1,6 +1,6 @@
 @extends('frontend.layouts.master')
 
-@section('title', 'Dr. Awish || Book An Appointment')
+@section('title', 'Marmik || Book An Appointment')
 
 @section('main-content')
 
@@ -39,7 +39,7 @@
                     <div class="form-group mt-3">
                         <label for="nameInput" class="form-label mx-2">Name<span class="text-danger">*</span></label>
                         <input name="name" id="name" type="text" class="form-control rounded-pill"
-                            placeholder="Enter name" value="{{old('name')}}" required>
+                            placeholder="Enter name" value="{{ old('name') }}" required>
                         @if ($errors->has('name'))
                             <div class=" text-danger" style="padding-left: 10px; font-size:16px;">
                                 {{ $errors->first('name') }}</div>
@@ -50,7 +50,7 @@
                     <div class="form-group mt-3">
                         <label for="emailInput" class="form-label mx-2">Email<span class="text-danger">*</span></label>
                         <input name="email" type="email" type="email" class="form-control rounded-pill"
-                            placeholder="Enter email" value="{{old('email')}}" required>
+                            placeholder="Enter email" value="{{ old('email') }}" required>
                         @if ($errors->has('email'))
                             <div class=" text-danger" style="padding-left: 10px; font-size:16px;">
                                 {{ $errors->first('email') }}</div>
@@ -63,7 +63,7 @@
                     <div class="form-group mt-3">
                         <label for="phone" class="form-label mx-2">Phone<span class="text-danger">*</span></label>
                         <input type="number" class="form-control rounded-pill" id="phone" name="phone" type="text"
-                            placeholder="Enter Phone Number" maxlength="10" value="{{old('phone')}}" required>
+                            placeholder="Enter Phone Number" maxlength="10" value="{{ old('phone') }}" required>
                         @if ($errors->has('phone'))
                             <div class=" text-danger" style="padding-left: 10px; font-size:16px;">
                                 {{ $errors->first('phone') }}</div>
@@ -74,8 +74,8 @@
                     <div class="form-group mt-3">
                         <label for="reason" class="form-label mx-2">Date Of Consultation<span
                                 class="text-danger">*</span></label>
-                        <input name="date" class="form-control rounded-pill" value="{{old('date')}}" type="date" id="myDate"
-                            onfocus="disablePastDates()" required>
+                        <input name="date" class="form-control rounded-pill" value="{{ old('date') }}" type="date"
+                            id="myDate" onfocus="disablePastDates()" required>
                         @if ($errors->has('date'))
                             <div class=" text-danger" style="padding-left: 10px; font-size:16px;">
                                 {{ $errors->first('date') }}</div>

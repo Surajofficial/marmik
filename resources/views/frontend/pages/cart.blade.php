@@ -1,5 +1,5 @@
 @extends('frontend.layouts.master')
-@section('title', 'Cart Page')
+@section('title', 'Marmik || Cart Page')
 @section('main-content')
     <section class="page-wrapper bg-color-light">
         <div class="container pt-3">

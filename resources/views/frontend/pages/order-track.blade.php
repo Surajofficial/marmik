@@ -1,6 +1,6 @@
 @extends('frontend.layouts.master')
 
-@section('title', 'Dr Awish || Order Track Page')
+@section('title', 'Marmik|| Order Track Page')
 
 @section('main-content')
     <section class="page-wrapper bg-primary1">

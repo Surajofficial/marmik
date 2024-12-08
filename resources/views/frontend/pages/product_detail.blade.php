@@ -5,7 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name='copyright' content=''>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="keywords" content="online shop, purchase, cart, ecommerce site, best online shopping">
     <meta name="description" content="{{ $product_detail->summary }}">
     <meta property="og:url" content="{{ route('product-detail', $product_detail->slug) }}">
     <meta property="og:type" content="article">
@@ -290,7 +289,8 @@
                                     {{-- <a id="notifyme" href="#" class="btn btn-outline-dark rounded-pill w-100">
                                         <i class="bi bi-bell me-2"></i>Notify Me
                                     </a> --}}
-                                    <a id="notifyme" href="{{route('home')}}" class="btn btn-outline-dark rounded-pill w-100">
+                                    <a id="notifyme" href="{{ route('home') }}"
+                                        class="btn btn-outline-dark rounded-pill w-100">
                                         Continue Shopping
                                     </a>
                                 @endif
@@ -560,25 +560,26 @@
                             </div>
                         </div>
 
-            </div>
+                </div>
 
-            <div class="mb-3">
-                <textarea class="form-control rounded-5" name="review" placeholder="Enter your comments & reviews" rows="6"></textarea>
-            </div>
-            <div class="text-end">
-                <button class="btn btn-dark btn-hover rounded-pill" type="submit" value="Submit">Send Review
-                    <i class="ri-send-plane-2-line align-bottom ms-1"></i></button>
-            </div>
-            </form>
-        @else
-            <p class="text-center p-5">
-                You need to <a href="{{ route('login.form') }}" style="color:rgb(54, 54, 204)">Login</a> OR <a
-                    style="color:blue" href="{{ route('login.form') }}">Register</a>
-            </p>
-            <!--/ End Form -->
-        @endauth
+                <div class="mb-3">
+                    <textarea class="form-control rounded-5" name="review" placeholder="Enter your comments & reviews" rows="6"></textarea>
+                </div>
+                <div class="text-end">
+                    <button class="btn btn-dark btn-hover rounded-pill" type="submit" value="Submit">Send Review
+                        <i class="ri-send-plane-2-line align-bottom ms-1"></i></button>
+                </div>
+                </form>
+            @else
+                <p class="text-center p-5">
+                    You need to <a href="{{ route('login.form') }}" style="color:rgb(54, 54, 204)">Login</a> OR <a
+                        style="color:blue" href="{{ route('login.form') }}">Register</a>
+                </p>
+                <!--/ End Form -->
+            @endauth
+        </div>
     </div>
-    </div></div>
+    </div>
 
     <section class="section" style="background-color:black">
         <div class="container">
@@ -595,7 +596,7 @@
             </div><!--end row-->
             <div class="row">
                 @foreach ($recent_products as $data)
-                    @if (($data->id != $product_detail->id) )
+                    @if ($data->id != $product_detail->id)
                         <div class="col-xxl-3 col-lg-4 col-sm-6">
                             <div
                                 class="card ecommerce-product-widgets border-0 rounded-4 shadow-none overflow-hidden card-animate">
@@ -606,8 +607,7 @@
                                     @endphp
                                     <a href="{{ route('product-detail', [$data->product->slug, $data->id]) }}">
                                         <img src="{{ $photo[0] }}" alt="{{ $photo[0] }}"
-                                            style="max-height: 200px;max-width: 100%;"
-                                            class="mx-auto d-block rounded-2">
+                                            style="max-height: 200px;max-width: 100%;" class="mx-auto d-block rounded-2">
                                     </a>
                                     <div class="action vstack gap-2">
                                         <button type="button"
@@ -661,7 +661,7 @@
             </div><!--end row-->
         </div><!--end section-->
     </section>
-    
+
     @include('frontend.layouts.newsletter')
 
     <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
