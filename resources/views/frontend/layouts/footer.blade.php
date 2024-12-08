@@ -91,7 +91,7 @@
                                     class="text-reset"><i class="mdi mdi-instagram text-light"></i></a>
                             </li>
                             <li class="list-inline-item">
-                            <a href="https://api.whatsapp.com/send/?phone=7303582738&text=Hey+there%21&type=phone_number&app_absent=0"
+                            <a href="https://api.whatsapp.com/send/?phone=917303582738&text=Hey+there%21&type=phone_number&app_absent=0"
                             class="text-reset"><i
                                     class="mdi mdi-whatsapp text-light "></i> </a>
                             </li>

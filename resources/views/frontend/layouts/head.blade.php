@@ -20,7 +20,8 @@
 <link rel="shortcut icon" type="image/x-icon" href="{{ asset('assets/images/f.png') }}">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+<link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
     rel="stylesheet">
 <link rel="stylesheet" href="{{ asset('css/style.css') }}">
 <link href="{{ asset('css/new.css?v=2') }}" rel="stylesheet" type="text/css">
@@ -28,6 +29,7 @@
     * {
         font-family: "Poppins", sans-serif !important;
     }
+
     /* Rating */
     .rating_box {
         display: inline-flex;
@@ -193,25 +195,26 @@
 
     /* here is css for accunt page  */
 
- /* Container styling to place elements in a row */
-.edit-container {
-    display: flex;
-    align-items: center; /* Vertically align the button and input */
-}
+    /* Container styling to place elements in a row */
+    .edit-container {
+        display: flex;
+        align-items: center;
+        /* Vertically align the button and input */
+    }
 
-/* Adjust the spacing between the input and button */
-.edit-container .edit-name {
-    margin-right: 10px; /* Space between input and button */
-}
+    /* Adjust the spacing between the input and button */
+    .edit-container .edit-name {
+        margin-right: 10px;
+        /* Space between input and button */
+    }
 
-/* Optional: Make input smaller if needed */
-.edit-container .edit-name {
-    width: auto; /* Adjust width as needed */
-}
+    /* Optional: Make input smaller if needed */
+    .edit-container .edit-name {
+        width: auto;
+        /* Adjust width as needed */
+    }
 
-#searchrecords{
-    display: none;
-}
-
-
+    #searchrecords {
+        display: none;
+    }
 </style>
