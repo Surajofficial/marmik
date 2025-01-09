@@ -26,7 +26,7 @@
     </section>
 
     <!-- About Us -->
-    <section class="ecommerce-about" style="padding-top:0px">
+    <section class="ecommerce-about bg-dark" style="padding-top:0px">
         <div class="effect d-none d-md-block">
             <div class="ecommerce-effect bg-primary"></div>
             <div class="ecommerce-effect bg-info"></div>
@@ -56,7 +56,7 @@
         </div>
     </section>
 
-    <div class="ecommerce-about-cta1 mb-4 mb-md-5">
+    <!-- <div class="ecommerce-about-cta1 mb-4 mb-md-5">
         <div class="container">
             <div class="row">
                 <div class="col-md-4">
@@ -109,7 +109,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
 
     @include('frontend.layouts.newsletter')
 

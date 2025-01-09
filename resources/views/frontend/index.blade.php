@@ -372,8 +372,8 @@
                     @endif
                 </div>
                 <div class="allProductButton  text-center mb-md-5 mt-4 mt-md-0">
-                    <a href="/" class="link-dark  link-effect border-bottom border-white text-light ">Shop All
-                        Products</a>
+                    <!-- <a href="/" class="link-dark  link-effect border-bottom border-white text-light ">Shop All
+                        Products</a> -->
                 </div>
             </div>
     </section>
@@ -523,8 +523,8 @@
                 <div class="col text-center text-light">
                     <h2 class="display-6 text-light">Because you need time for yourself.</h2>
                     <h2 class="display-6 mb-4 text-light"> Blend beauty in you</h2>
-                    <a href="/" class=" link-effect border-bottom border-black mb-5 text-light">Shop All
-                        Products</a>
+                    <!-- <a href="/" class=" link-effect border-bottom border-black mb-5 text-light">Shop All
+                        Products</a> -->
                     <h2> </h2>
                 </div>
             </div>
@@ -681,7 +681,7 @@
                                                 </a>
                                             </div>
                                         </div>
-                                        <div class="card-body  pb-0" style="background-color:rgb(0,0,0)">
+                                        <div class="card-body  pb-0" >
                                             <div>
 
                                                 <a
@@ -733,7 +733,7 @@
         <section class="section pt-4 ">
             <div class="container-fluid">
 
-                <h2 class="display-6 mt-3 mb-4 text-center"> <b> Over 2,000 Happy reviews</b></h2>
+                <h2 class="display-6 mt-3 mb-4 text-center justify-content-center"> <b> Over 2,000 Happy Reviews</b></h2>
 
                 <div class="row">
                     <div class="col-lg-12">

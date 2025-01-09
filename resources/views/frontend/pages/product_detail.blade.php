@@ -119,7 +119,7 @@
     </style>
 
 @endsection
-@section('title', 'Dr Awish || PRODUCT DETAIL')
+@section('title', 'Marmik || PRODUCT DETAIL')
 @section('main-content')
     <section class="section page-wrapper">
         <div class="container mt-5 pt-5 text-justify">
@@ -215,9 +215,6 @@
                                     @endif
 
                                 </h5>
-                                <p class="text-muted mb-4 w-100 ml-2 h-100 lh-base" style="font-size: 0.8rem;">
-                                    {!! $product_detail->summary !!}
-                                </p>
                                 @if (isset($variant))
                                     <div class="col-md-6 mt-3">
                                         <div>
@@ -254,6 +251,10 @@
                                         </div>
                                     </div>
                                 @endif
+                                
+                                <p class="text-muted mb-4 w-100 ml-2 h-100 lh-base" style="font-size: 0.8rem;">
+                                    {!! $product_detail->summary !!}
+                                </p>
 
                                 <ul class="list-unstyled vstack gap-2 my-2">
                                     <li class="">
@@ -302,7 +303,7 @@
                                             data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true"
                                             aria-controls="collapseOne"
                                             style="background-color :white; color:black; border: 0 !important;">
-                                            Overview
+                                            Product Description
                                         </button>
                                     </h2>
                                     <div id="collapseOne" class="accordion-collapse collapse"
@@ -381,7 +382,7 @@
                                             data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="true"
                                             aria-controls="collapseOne"
                                             style="background-color :white; color:black; border: 0 !important;">
-                                            How To Use
+                                            Ingredients
                                         </button>
                                     </h2>
                                     <div id="collapseTwo" class="accordion-collapse collapse"
@@ -400,7 +401,7 @@
                                             data-bs-toggle="collapse" data-bs-target="#collapseThree"
                                             aria-expanded="true" aria-controls="collapseOne"
                                             style="background-color :white; color:black; border: 0 !important;">
-                                            Evidence
+                                            How To Use
                                         </button>
                                     </h2>
                                     <div id="collapseThree" class="accordion-collapse collapse"

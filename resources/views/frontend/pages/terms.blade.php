@@ -32,10 +32,13 @@
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb  justify-content-center mt-4" style="color:black !important">
                             <li class="breadcrumb-item"><a href="/">Home</a></li>
-                            <li class="breadcrumb-item">Terms of Conditions</li>
+                            <li class="breadcrumb-item">Terms & Conditions</li>
                         </ol>
                     </nav>
-                    <p class="h3 lh-base mx-5 m-lg-0  ">Last Updated {{ @$terms[0]->updated_at }}</p>
+                        <div class="text-center">
+                            <p class="h3 lh-base mx-5 m-lg-0  ">Terms & Conditions</p>
+                        </div>
+                    <!-- <p class="h3 lh-base mx-5 m-lg-0  ">Last Updated {{ @$terms[0]->updated_at }}</p> -->
                 </div>
             </div><!--end col-->
         </div><!--end row-->
