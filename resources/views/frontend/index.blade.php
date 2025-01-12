@@ -145,17 +145,6 @@
                                 <div class="col-sm-10 col-md-6 col-lg-3 mb-3">
                                     <div class="card shadow-lg overflow-hidden element-item rounded-4 p-0 h-100 w-100">
                                         <div class="gallery-product overflow-hidden">
-                                            {{-- @if ($product->stock > 0)
-                                                                <a href="{{ route('product-detail', [$product->product->slug, $product->id]) }}">
-                                                                    <img src="{{ $photo[0] }}" alt="{{ $photo[0] }}"
-                                                                        style=" border-radius: 20px 20px 0 0;" class="img-fluid w-100 m-0"
-                                                                        loading="lazy">
-                                                                </a>
-                                                            @else
-                                                                <img src="{{ $photo[0] }}" alt="{{ $photo[0] }}"
-                                                                    style=" border-radius: 20px 20px 0 0;" class="img-fluid w-100 m-0"
-                                                                    loading="lazy">
-                                                            @endif --}}
                                             <a
                                                 href="{{ route('product-detail', [$product->product->slug, $product->id]) }}">
                                                 <img src="{{ $photo[0] }}" alt="{{ $photo[0] }}"
@@ -314,25 +303,6 @@
                                                     $after_discount =
                                                         $product->price - ($product->price * $product->discount) / 100;
                                                 @endphp
-                                                {{-- @if ($product->display_price == $product->price)
-                                                                    @if ($product->discount > 0)
-                                                                        <h5 class="mb-0  fw-500 ">
-                                                                            ₹{{ number_format($after_discount, 2) }}
-                                                                            <span class=" fs-12 text-decoration-line-through"><del>₹
-                                                                                    {{ number_format($product->price, 2) }}</del></span>
-                                                                        </h5>
-                                                                    @else
-                                                                        <h5 class="mb-0 fw-500">
-                                                                            ₹{{ number_format($after_discount, 2) }}
-                                                                        </h5>
-                                                                    @endif
-                                                                @else
-                                                                    <h5 class="mb-0  fw-500 ">
-                                                                        ₹{{ number_format($product->display_price) }}
-                                                                        <span class="fs-12 text-decoration-line-through"><del>₹
-                                                                                {{ number_format($product->price, 2) }}</del></span>
-                                                                    </h5>
-                                                                @endif --}}
 
                                                 @if ($product->stock <= 0)
                                                     <div class="d-inline">
@@ -373,68 +343,12 @@
                 </div>
                 <div class="allProductButton  text-center mb-md-5 mt-4 mt-md-0">
                     <!-- <a href="/" class="link-dark  link-effect border-bottom border-white text-light ">Shop All
-                        Products</a> -->
+                                                Products</a> -->
                 </div>
             </div>
     </section>
 
 
-
-    <!-- @if ($concern) -->
-    <!-- <section class="py-5 bg-color-light" id="shopbyproducttype">
-            <div class="container-fluid">
-                <div class="row justify-content-center">
-                    <div class="col-lg-7">
-                        <div class="section-content text-center mb-5">
-                            <h2 class="display-6"> <b> Shop By Concern</b></h2>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-12">
-                        <div class="swiper latest-slider  " id="common_slider">
-                            <div class="swiper-wrapper">
-                                @foreach ($concern as $item)
-    @php
-        $photo = explode(',', $item->photo);
-        $url = 'product-concern' . '/' . $item->slug;
-    @endphp
-                                    <div class="col-lg-12 col-md-6 swiper-slide">
-                                        <div class="card concern-card img-hover-zoom img-hover-zoom--slowmo shadow-lg overflow-hidden br-5"
-                                            style="border-radius: 25px">
-                                            <a href="{{ route('product-concern', $item->slug) }}" class="overflow-hidden">
-                                                <img src="{{ $photo[0] }}" alt="{{ $photo[0] }}" class=" img-fluid w-100"
-                                                    loading="lazy"></a>
-                                            <div class="card-img-overlay1 category-btn2">
-                                                <div class="d-flex align-items-center justify-content-between p-3 ">
-                                                    <div>
-                                                        <h6 class="fw-500 mb-2">{{ $item->title }} </h6>
-                                                    </div>
-
-                                                    <a href="{{ route('product-concern', $item->slug) }}"> <span
-                                                            href="{{ route('product-concern', $item->slug) }}"
-                                                            class="btn btn-icon btn-topbar btn-light-dark  rounded-circle  fw-bold shadow-lg"><i
-                                                                class="bi bi-arrow-right-short fs-bold text-light1 fs-1"></i></span></a>
-                                                </div>
-
-                                            </div>
-                                        </div>
-                                    </div>
-    @endforeach
-                            </div>
-
-                        </div>
-                        <div class="control-btn col-12">
-                            <span class="swiper-button-prev-top prev"></span>
-                            <span class="swiper-button-next-top next"></span>
-                        </div>
-                    </div>
-
-                </div>
-
-            </div>
-        </section> -->
-    <!-- @endif -->
     <!-- End Midium Banner -->
     <!-- End Most Popular Area -->
     @if ($product_type)
@@ -491,29 +405,6 @@
     @endif
 
 
-    <!-- @if ($promise)
-        <section class="pt-4 pb-3 bg-dark bg-opacity-50 border-top border-bottom">
-            <div class="container-fluid1">
-
-                <marquee scrollamount="15">
-                    <div class="d-flex gy-5">
-                        @foreach ($promise as $key => $promises)
-    @php
-        $photo = explode(',', $promises->photo);
-    @endphp
-                                    <div class="certified-box1 text-center d-flex align-items-center gap-4">
-                                        <div class="marquee-img">
-                                            <img src="{{ $photo[0] }}" alt="" class="img-fluid" loading="lazy">
-                                        </div>
-                                        <span class="fs-1 text-capitalize mb-0">{{ $promises->title }}</span>
-                                    </div>
-    @endforeach
-
-                    </div>
-                </marquee>
-            </div>
-        </section>
-    @endif -->
 
     <!-- Start Special Offer -->
     <section class="py-5" style="background-color: black;" id="shopbyproducttype">
@@ -524,7 +415,7 @@
                     <h2 class="display-6 text-light">Because you need time for yourself.</h2>
                     <h2 class="display-6 mb-4 text-light"> Blend beauty in you</h2>
                     <!-- <a href="/" class=" link-effect border-bottom border-black mb-5 text-light">Shop All
-                        Products</a> -->
+                                                Products</a> -->
                     <h2> </h2>
                 </div>
             </div>
@@ -681,7 +572,7 @@
                                                 </a>
                                             </div>
                                         </div>
-                                        <div class="card-body  pb-0" >
+                                        <div class="card-body  pb-0">
                                             <div>
 
                                                 <a
@@ -813,209 +704,209 @@
         @include('frontend.layouts.newsletter')
     @endif
     <!-- @if ($certified)
-        <section class="ecommerce-about-team1 py-3 bg-dark bg-opacity-50">
-            <div class="container">
-                <div class="row justify-content-center ">
-                    <div class="col-lg-6">
-                        <h2 class="fs-1 text-center mb-2 fw-500"> <b>Certified By</b> </h2>
-                    </div>
-                </div>
-                <div class="row1 d-flex align-items-center justify-content-around">
+                                <section class="ecommerce-about-team1 py-3 bg-dark bg-opacity-50">
+                                    <div class="container">
+                                        <div class="row justify-content-center ">
+                                            <div class="col-lg-6">
+                                                <h2 class="fs-1 text-center mb-2 fw-500"> <b>Certified By</b> </h2>
+                                            </div>
+                                        </div>
+                                        <div class="row1 d-flex align-items-center justify-content-around">
 
-                    @foreach ($certified as $key => $cert)
+                                            @foreach ($certified as $key => $cert)
     <div class="1col-4 1col-md-2">
-                            <div class="certified-box text-center">
-                                <div class="team-img">
-                                    <img src="{{ $cert->photo }}" alt="" class="img-fluid certified-img" loading="lazy">
-                                </div>
-                            </div>
-                        </div>
+                                                    <div class="certified-box text-center">
+                                                        <div class="team-img">
+                                                            <img src="{{ $cert->photo }}" alt="" class="img-fluid certified-img" loading="lazy">
+                                                        </div>
+                                                    </div>
+                                                </div>
     @endforeach
-                </div>
-            </div>
-        </section>
-    @endif -->
+                                        </div>
+                                    </div>
+                                </section>
+                            @endif -->
 
     <!-- <section class="section">
-        <div class="container-fluid container-custom">
-            <div class="row justify-content-center">
-                <div class="col-11">
-                    <div class="section-content text-center mb-5 ">
-                        <h2 class="display-6">Drawish products are evidence-based and certified,</h2>
-                        <h2 class="display-6 mb-4">Ensuring scientifically proven effectiveness and trusted quality.</h2>
-                        <a href="/about-us" class="link-dark link-effect border-bottom border-black">About Us</a>
+                                <div class="container-fluid container-custom">
+                                    <div class="row justify-content-center">
+                                        <div class="col-11">
+                                            <div class="section-content text-center mb-5 ">
+                                                <h2 class="display-6">Drawish products are evidence-based and certified,</h2>
+                                                <h2 class="display-6 mb-4">Ensuring scientifically proven effectiveness and trusted quality.</h2>
+                                                <a href="/about-us" class="link-dark link-effect border-bottom border-black">About Us</a>
 
 
-                    </div>
-                </div>
-            </div>
-            <div class="row g-5">
-                <div class="col-12 col-md-4">
-                    <div class="position-relative element-item br-5" style="height:100%">
-                        <div class="social-content">
-                            {{-- <a href="#">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row g-5">
+                                        <div class="col-12 col-md-4">
+                                            <div class="position-relative element-item br-5" style="height:100%">
+                                                <div class="social-content">
+                                                    {{-- <a href="#">
                             <h2 class="fs-2 fw-500 mb-md-4 mb-2" style="border: 1px solid #ccc">News, tips, reviews</h2>
                         </a> --}}
-                            <a id="/" href="#" class="btn btn-dark rounded-pill px-0 px-md-2 px-lg-5 w-75 ">
-                                News, tips, reviews
-                            </a>
-                        </div>
-                        <div class="gallery-product h-100">
-                            <img src="/assets/images/blog.jpg" alt="" class="img-fluid " style="width:100%; height:100%;"
-                                loading="lazy">
-                        </div>
-                    </div>
-                </div>
+                                                    <a id="/" href="#" class="btn btn-dark rounded-pill px-0 px-md-2 px-lg-5 w-75 ">
+                                                        News, tips, reviews
+                                                    </a>
+                                                </div>
+                                                <div class="gallery-product h-100">
+                                                    <img src="/assets/images/blog.jpg" alt="" class="img-fluid " style="width:100%; height:100%;"
+                                                        loading="lazy">
+                                                </div>
+                                            </div>
+                                        </div>
 
 
-                <div class="col-12 col-md-4">
-                    <div class="position-relative element-item br-5">
-                        <div class="gallery-product h-100">
-                            <img src="/assets/images/imagelocation.jpg" alt="" class="img-fluid scl"
-                                style="width:100%; height:100%; margin-bottom:20px;" loading="lazy">
+                                        <div class="col-12 col-md-4">
+                                            <div class="position-relative element-item br-5">
+                                                <div class="gallery-product h-100">
+                                                    <img src="/assets/images/imagelocation.jpg" alt="" class="img-fluid scl"
+                                                        style="width:100%; height:100%; margin-bottom:20px;" loading="lazy">
 
-                            <div id="store-list">
-                                @if ($stores->isEmpty())
-                                    <p>No stores available.</p>
+                                                    <div id="store-list">
+                                                        @if ($stores->isEmpty())
+                                                            <p>No stores available.</p>
 @else
     @foreach ($stores->take(3) as $store)
     <div class="gallery-product h-100">
-                                            <h4 class="mt-2 text-white p-1 rounded"
-                                                style="display: inline-block; background-color: rgb(0,0,0);">
-                                                {{ $store->title }}
-                                            </h4>
-                                            <p>
-                                                <span class="address-wrapper">
-                                                    <a href="{{ $store->locationurl }}" target="_blank">{{ $store->address }}</a>
-                                                </span>
-                                            </p>
-                                            <div class="star-rating">
-                                                @for ($i = 1; $i <= 5; $i++)
+                                                                    <h4 class="mt-2 text-white p-1 rounded"
+                                                                        style="display: inline-block; background-color: rgb(0,0,0);">
+                                                                        {{ $store->title }}
+                                                                    </h4>
+                                                                    <p>
+                                                                        <span class="address-wrapper">
+                                                                            <a href="{{ $store->locationurl }}" target="_blank">{{ $store->address }}</a>
+                                                                        </span>
+                                                                    </p>
+                                                                    <div class="star-rating">
+                                                                        @for ($i = 1; $i <= 5; $i++)
     <span class="star {{ $i <= $store->rating ? 'filled' : '' }}">&#9733;</span>
     @endfor
+                                                                    </div>
+                                                                </div>
+    @endforeach
+                                                        @endif
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
-    @endforeach
-                                @endif
-                            </div>
-                        </div>
-                    </div>
-                </div>
 
 
 
 
-                <div class="col-12 col-md-4">
-                    <div class="position-relative element-item br-5" style="height:100%">
-                        <div class="social-content">
-                            {{-- <a href="https://www.instagram.com/drawishproduct?igsh=cXYyMmR5OTViZ3Nx">
+                                        <div class="col-12 col-md-4">
+                                            <div class="position-relative element-item br-5" style="height:100%">
+                                                <div class="social-content">
+                                                    {{-- <a href="https://www.instagram.com/drawishproduct?igsh=cXYyMmR5OTViZ3Nx">
                             <h2 class="fs-2 fw-500 mb-md-4 mb-2" style="border: 1px solid #c78651">On The Gram</h2>
                         </a> --}}
-                            <a id="/" href="https://www.instagram.com/drawishproduct?igsh=cXYyMmR5OTViZ3Nx"
-                                class="btn btn-dark rounded-pill px-0 px-md-2 px-lg-5 w-75 ">
-                                {{-- @~Dr. Vijay Kumar --}}
-                                On The Gram
-                            </a>
-                        </div>
-                        <div class="gallery-product h-100">
-                            <img src="/assets/images/insta.jpg" alt="" class="img-fluid " style="width:100%; height:100%;"
-                                loading="lazy">
-                        </div>
-                    </div>
-                </div>
+                                                    <a id="/" href="https://www.instagram.com/drawishproduct?igsh=cXYyMmR5OTViZ3Nx"
+                                                        class="btn btn-dark rounded-pill px-0 px-md-2 px-lg-5 w-75 ">
+                                                        {{-- @~Dr. Vijay Kumar --}}
+                                                        On The Gram
+                                                    </a>
+                                                </div>
+                                                <div class="gallery-product h-100">
+                                                    <img src="/assets/images/insta.jpg" alt="" class="img-fluid " style="width:100%; height:100%;"
+                                                        loading="lazy">
+                                                </div>
+                                            </div>
+                                        </div>
 
-            </div>
-        </div>
-    </section> -->
+                                    </div>
+                                </div>
+                            </section> -->
 
     <!-- <section class="py-5 bg-dark bg-opacity-50 " id="shopbyproducttype">
-        <div class="container-fluid px-md-5">
+                                <div class="container-fluid px-md-5">
 
-            <div class="row px-xl-5 align-content-center">
-                <div class="col-12 col-md-6 col-lg-3 pb-md-5">
-                    <div class="text-center text-md-start">
-                        <h2 class="fs-2 fw-500 mb-4 ">We're answerable!</h2>
-                        <p class="mb-4">We create safe products that really work and are designed to make you feel good.
-                            Any question about our products?
-                        </p>
-                        <p>
-                            Check if you can find them here or
-                            Contact us</p>
-                        <a id="buyNow" href="/faq" class="btn btn-dark rounded-pill px-5 mt-5">
-                            See More Answers
-                        </a>
-                    </div>
-                </div>
-                <div class="col-12 col-md-6 col-lg-4  d-flex align-items-end justify-content-center">
-                    <img src="/assets/images/faq-new.webp" alt="" class="img-fluid rounded-lg" loading="lazy">
-                </div>
-                <div class="col-12  col-lg-5">
-                    <div class="accordion" id="accordionExample">
-                        <div class="accordion-item">
-                            <h2 class="accordion-header" id="headingOne">
-                                <button class="accordion-button fs-6" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                    Does my piece come in any packaging?
-                                </button>
-                            </h2>
-                            <div id="collapseOne" class="accordion-collapse collapse py-3 border-top bg-white show"
-                                aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-                                <hr class="m-0" width="80%" >
-                                <div class="accordion-body lh-sm text-dark fs-caption">Paceholder content for this
-                                    accordion, which is intended to demonstrate the <code>.accordion-</code> class. This is
-                                    the first item's accordion body.</div>
-                            </div>
-                        </div>
-                        <div class="accordion-item">
-                            <h2 class="accordion-header" id="headingTwo">
-                                <button class="accordion-button fs-6 collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                    Do you ship internationally?
-                                </button>
-                            </h2>
-                            <div id="collapseTwo" class="accordion-collapse collapse py-3 border-top bg-white"
-                                aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
-                                <div class="accordion-body lh-sm text-dark fs-caption">Shipping usually takes 3-7 business
-                                    days, depending on your location. Expedited shipping options are available for faster
-                                    delivery. Contact us for any specific shipping inquiries.</div>
-                            </div>
-                        </div>
-                        <div class="accordion-item">
-                            <h2 class="accordion-header" id="headingThree">
-                                <button class="accordion-button fs-6 collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                    Does my piece come in any packaging?
-                                </button>
-                            </h2>
-                            <div id="collapseThree" class="accordion-collapse collapse py-3 border-top bg-white"
-                                aria-labelledby="headingThree" data-bs-parent="#accordionExample">
-                                <div class="accordion-body lh-sm text-dark fs-caption">Placeholder content for this
-                                    accordion, which is intended to demonstrate the <code>.accordion-</code> class. This is
-                                    the third item's accordion body. Nothing more exciting happening here in terms of
-                                    content, but just filling up the space to make it look, at least at first glance, a bit
-                                    more representative of how this would look in a real-world application.</div>
-                            </div>
-                        </div>
-                        <div class="accordion-item">
-                            <h2 class="accordion-header" id="heading4">
-                                <button class="accordion-button fs-6 collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
-                                    How long does shipping take?
-                                </button>
-                            </h2>
-                            <div id="collapse4" class="accordion-collapse collapse py-3 border-top bg-white"
-                                aria-labelledby="heading4" data-bs-parent="#accordionExample">
-                                <div class="accordion-body lh-sm text-dark fs-caption">Shipping usually takes 3-7 business
-                                    days, depending on your location. Expedited shipping options are available for faster
-                                    delivery. Contact us for any specific shipping inquiries.</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+                                    <div class="row px-xl-5 align-content-center">
+                                        <div class="col-12 col-md-6 col-lg-3 pb-md-5">
+                                            <div class="text-center text-md-start">
+                                                <h2 class="fs-2 fw-500 mb-4 ">We're answerable!</h2>
+                                                <p class="mb-4">We create safe products that really work and are designed to make you feel good.
+                                                    Any question about our products?
+                                                </p>
+                                                <p>
+                                                    Check if you can find them here or
+                                                    Contact us</p>
+                                                <a id="buyNow" href="/faq" class="btn btn-dark rounded-pill px-5 mt-5">
+                                                    See More Answers
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-md-6 col-lg-4  d-flex align-items-end justify-content-center">
+                                            <img src="/assets/images/faq-new.webp" alt="" class="img-fluid rounded-lg" loading="lazy">
+                                        </div>
+                                        <div class="col-12  col-lg-5">
+                                            <div class="accordion" id="accordionExample">
+                                                <div class="accordion-item">
+                                                    <h2 class="accordion-header" id="headingOne">
+                                                        <button class="accordion-button fs-6" type="button" data-bs-toggle="collapse"
+                                                            data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                                            Does my piece come in any packaging?
+                                                        </button>
+                                                    </h2>
+                                                    <div id="collapseOne" class="accordion-collapse collapse py-3 border-top bg-white show"
+                                                        aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                                        <hr class="m-0" width="80%" >
+                                                        <div class="accordion-body lh-sm text-dark fs-caption">Paceholder content for this
+                                                            accordion, which is intended to demonstrate the <code>.accordion-</code> class. This is
+                                                            the first item's accordion body.</div>
+                                                    </div>
+                                                </div>
+                                                <div class="accordion-item">
+                                                    <h2 class="accordion-header" id="headingTwo">
+                                                        <button class="accordion-button fs-6 collapsed" type="button" data-bs-toggle="collapse"
+                                                            data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                                            Do you ship internationally?
+                                                        </button>
+                                                    </h2>
+                                                    <div id="collapseTwo" class="accordion-collapse collapse py-3 border-top bg-white"
+                                                        aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                                                        <div class="accordion-body lh-sm text-dark fs-caption">Shipping usually takes 3-7 business
+                                                            days, depending on your location. Expedited shipping options are available for faster
+                                                            delivery. Contact us for any specific shipping inquiries.</div>
+                                                    </div>
+                                                </div>
+                                                <div class="accordion-item">
+                                                    <h2 class="accordion-header" id="headingThree">
+                                                        <button class="accordion-button fs-6 collapsed" type="button" data-bs-toggle="collapse"
+                                                            data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                                            Does my piece come in any packaging?
+                                                        </button>
+                                                    </h2>
+                                                    <div id="collapseThree" class="accordion-collapse collapse py-3 border-top bg-white"
+                                                        aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                                                        <div class="accordion-body lh-sm text-dark fs-caption">Placeholder content for this
+                                                            accordion, which is intended to demonstrate the <code>.accordion-</code> class. This is
+                                                            the third item's accordion body. Nothing more exciting happening here in terms of
+                                                            content, but just filling up the space to make it look, at least at first glance, a bit
+                                                            more representative of how this would look in a real-world application.</div>
+                                                    </div>
+                                                </div>
+                                                <div class="accordion-item">
+                                                    <h2 class="accordion-header" id="heading4">
+                                                        <button class="accordion-button fs-6 collapsed" type="button" data-bs-toggle="collapse"
+                                                            data-bs-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
+                                                            How long does shipping take?
+                                                        </button>
+                                                    </h2>
+                                                    <div id="collapse4" class="accordion-collapse collapse py-3 border-top bg-white"
+                                                        aria-labelledby="heading4" data-bs-parent="#accordionExample">
+                                                        <div class="accordion-body lh-sm text-dark fs-caption">Shipping usually takes 3-7 business
+                                                            days, depending on your location. Expedited shipping options are available for faster
+                                                            delivery. Contact us for any specific shipping inquiries.</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
 
-        </div>
-    </section> -->
+                                </div>
+                            </section> -->
     <style>
         #feedback-slider .swiper-slide-next {
             transform: scaleY(2n) !important
