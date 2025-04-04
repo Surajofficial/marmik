@@ -4,7 +4,28 @@
 <head>
     <title>Dr Awish || Login Page</title>
     @include('backend.layouts.head')
+    <style>
+        .alert {
+            margin: 10px 0;
+            padding: 15px;
+            border-radius: 5px;
+        }
 
+        .alert-success {
+            background-color: #d4edda;
+            color: #155724;
+        }
+
+        .alert-danger {
+            background-color: #f8d7da;
+            color: #721c24;
+        }
+
+        .bg-login-image {
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
 </head>
 
 <body class="bg-gradient-primary">
@@ -21,13 +42,30 @@
                         <!-- Nested Row within Card Body -->
                         <div class="row">
                             <div class="col-lg-6 d-none d-lg-block bg-login-image">
-                                <img src="{{ asset('backend/adminlogin.png') }}" class="img-fluid w-100" alt="">
+                                <img src="{{ asset('backend/adminlogin.png') }}" class="img-fluid w-100"
+                                    alt="Login Image">
                             </div>
                             <div class="col-lg-6">
                                 <div class="p-5">
                                     <div class="text-center">
                                         <h1 class="h4 text-gray-900 mb-4">Welcome Back!</h1>
                                     </div>
+
+                                    <!-- Display flash messages -->
+                                    @if (session('success'))
+                                        <div class="alert alert-success">
+                                            {{ session('success') }}
+                                        </div>
+                                    @endif
+
+                                    @if ($errors->any())
+                                        <div class="alert alert-danger">
+                                            @foreach ($errors->all() as $error)
+                                                <p>{{ $error }}</p>
+                                            @endforeach
+                                        </div>
+                                    @endif
+
                                     <form class="user" method="POST" action="{{ route('admin.login') }}">
                                         @csrf
                                         <div class="form-group">
@@ -42,6 +80,7 @@
                                                 </span>
                                             @enderror
                                         </div>
+
                                         <div class="form-group">
                                             <input type="password"
                                                 class="form-control form-control-user @error('password') is-invalid @enderror"
@@ -52,31 +91,27 @@
                                                     <strong>{{ $message }}</strong>
                                                 </span>
                                             @enderror
-
                                         </div>
+
                                         <div class="form-group">
                                             <div class="form-check">
                                                 <input class="form-check-input" type="checkbox" name="remember"
                                                     id="remember" {{ old('remember') ? 'checked' : '' }}>
-
                                                 <label class="form-check-label" for="remember">
                                                     {{ __('Remember Me') }}
                                                 </label>
                                             </div>
                                         </div>
+
                                         <button type="submit" class="btn btn-primary btn-user btn-block">
                                             Login
                                         </button>
                                     </form>
+
                                     <hr>
 
-                                    <div class="text-center">
-                                        @if (Route::has('password.request'))
-                                            <a class="btn btn-link small" href="{{ route('password.request') }}">
-                                                {{ __('Forgot Your Password?') }}
-                                            </a>
-                                        @endif
-                                    </div>
+
+
                                 </div>
                             </div>
                         </div>

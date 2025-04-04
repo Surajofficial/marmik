@@ -607,14 +607,38 @@ class AdminController extends Controller
     }
     public function login_submit(Request $request)
     {
+        // Step 1: Validate Input
+        $request->validate([
+            'email' => 'required|email',
+            'password' => 'required|string|min:6',
+        ]);
 
+        // Step 2: Get credentials from request
         $credentials = $request->only('email', 'password');
-        if (Auth::guard('admin')->attempt($credentials)) {
+
+        // Step 3: Check for multiple failed attempts (Rate Limiting)
+        if (RateLimiter::tooManyAttempts('login:' . $request->ip(), 5)) {
+            return redirect()->back()->withErrors(['email' => 'Too many login attempts. Please try again later.']);
+        }
+
+        // Step 4: Attempt to log in
+        if (Auth::guard('admin')->attempt($credentials, $request->filled('remember'))) {
+            // Reset login attempts on successful login
+            RateLimiter::clear('login:' . $request->ip());
+
+            // Store login success message
+            session()->flash('success', 'Login successful!');
             return redirect()->intended('/admin'); // Redirect after successful login
         }
 
-        return redirect()->back()->withErrors(['email' => 'Invalid credentials.']);
+        // Increment failed login attempts
+        RateLimiter::hit('login:' . $request->ip());
+
+        // Step 5: Redirect back with an error message if login fails
+        return redirect()->back()->withInput($request->only('email'))
+            ->withErrors(['email' => 'Invalid credentials. Please try again.']);
     }
+
     public function logout(Request $request)
     {
         Auth::guard('admin')->logout();
