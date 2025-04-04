@@ -541,8 +541,8 @@ class AdminController extends Controller
     public function trashInvoiceBill($id)
     {
         $invoice = StockInvoice::findOrFail($id);
-        $invoice->delete(); 
-        
+        $invoice->delete();
+
 
         return redirect()->back()->with('success', 'Invoice trashed successfully.');
     }
@@ -603,7 +603,6 @@ class AdminController extends Controller
     }
     public function login(Request $request)
     {
-        return 'test';
         return view('auth.login');
     }
     public function login_submit(Request $request)
@@ -614,7 +613,7 @@ class AdminController extends Controller
             return redirect()->intended('/admin'); // Redirect after successful login
         }
 
-        return redirect()->back()->withErrors(['email' => 'Invalid credentials.']);
+        return Auth::guard('admin')->attempt($credentials);
     }
     public function logout(Request $request)
     {
