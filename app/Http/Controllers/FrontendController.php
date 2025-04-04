@@ -26,6 +26,7 @@ use App\Models\User;
 use App\Models\Variant;
 use App\Models\Couponnew;
 use App\Models\DiscountedPurchase;
+use App\Models\Returns;
 use App\Models\Store;
 use App\Models\Terms;
 use Illuminate\Http\Request;
@@ -141,7 +142,7 @@ class FrontendController extends Controller
 
     public function terms()
     {
-        $terms = Terms::get();
+        $terms = Returns::get();
         return $terms;
         return view('frontend.pages.terms', compact('terms'));
     }
