@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use App\Http\Middleware\Admin;
+use App\Models\Admin as ModelsAdmin;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
@@ -36,24 +37,24 @@ class UsersTableSeeder extends Seeder
         //         'status' => 'active'
         //     ),
         // );
-        $user = Admin::create([
-                 'name' => 'Admin',
-                'email' => 'admin123@gmail.com',
-                'password' => Hash::make('admin@123'),
-                'mobile' => '8887983006',
-                'role' => 'admin',
-                'status' => 'active'
-                
+        $user = ModelsAdmin::create([
+            'name' => 'Admin',
+            'email' => 'admin123@gmail.com',
+            'password' => Hash::make('admin@123'),
+            'mobile' => '8887983006',
+            'role' => 'admin',
+            'status' => 'active'
+
         ]);
-    
-    //ssss    $role = Role::create(['name' => 'admin']);
-     
-    //    $permissions = Permission::pluck('id','id')->all();
-   
-      //      $role->syncPermissions($permissions);
-     
+
+        //ssss    $role = Role::create(['name' => 'admin']);
+
+        //    $permissions = Permission::pluck('id','id')->all();
+
+        //      $role->syncPermissions($permissions);
+
         //$user->assignRole([$role->id]);
 
-      
+
     }
 }
