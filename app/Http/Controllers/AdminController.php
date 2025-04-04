@@ -613,7 +613,7 @@ class AdminController extends Controller
             return redirect()->intended('/admin'); // Redirect after successful login
         }
 
-        return Auth::guard('admin')->attempt($credentials);
+        return redirect()->back()->withErrors(['email' => 'Invalid credentials.']);
     }
     public function logout(Request $request)
     {
