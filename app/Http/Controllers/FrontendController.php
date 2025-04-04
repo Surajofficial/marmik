@@ -27,6 +27,7 @@ use App\Models\Variant;
 use App\Models\Couponnew;
 use App\Models\DiscountedPurchase;
 use App\Models\Store;
+use App\Models\Terms;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
@@ -140,7 +141,8 @@ class FrontendController extends Controller
 
     public function terms()
     {
-        return view('frontend.pages.terms');
+        $terms = Terms::get();
+        return view('frontend.pages.terms', compact('terms'));
     }
     public function story()
     {
