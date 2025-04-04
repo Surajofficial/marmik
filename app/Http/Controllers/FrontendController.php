@@ -142,6 +142,7 @@ class FrontendController extends Controller
     public function terms()
     {
         $terms = Terms::get();
+        return $terms;
         return view('frontend.pages.terms', compact('terms'));
     }
     public function story()
