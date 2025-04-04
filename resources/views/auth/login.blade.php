@@ -59,11 +59,9 @@
                                     @endif
 
                                     @if ($errors->any())
-                                        <div class="alert alert-danger">
-                                            @foreach ($errors->all() as $error)
-                                                <p>{{ $error }}</p>
-                                            @endforeach
-                                        </div>
+                                        @foreach ($errors->all() as $error)
+                                            <p>{{ $error }}</p>
+                                        @endforeach
                                     @endif
 
                                     <form class="user" method="POST" action="{{ route('admin.login') }}">
