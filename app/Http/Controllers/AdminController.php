@@ -603,6 +603,7 @@ class AdminController extends Controller
     }
     public function login(Request $request)
     {
+        return 'test';
         return view('auth.login');
     }
     public function login_submit(Request $request)
