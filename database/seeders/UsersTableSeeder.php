@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Http\Middleware\Admin;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
@@ -35,7 +36,7 @@ class UsersTableSeeder extends Seeder
         //         'status' => 'active'
         //     ),
         // );
-        $user = User::create([
+        $user = Admin::create([
                  'name' => 'Admin',
                 'email' => 'admin123@gmail.com',
                 'password' => Hash::make('admin@123'),
