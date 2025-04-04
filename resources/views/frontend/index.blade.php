@@ -620,7 +620,7 @@
 
 
     <!-- testimonial start -->
-    @if ($testimonial)
+    @if (!$testimonial)
         <section class="section pt-4 ">
             <div class="container-fluid">
 
