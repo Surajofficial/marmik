@@ -95,10 +95,7 @@
                             class="text-reset"><i
                                     class="mdi mdi-whatsapp text-light "></i> </a>
                             </li>
-                            <!-- <li class="list-inline-item">
-                                <a href="@foreach ($settings as $data) {{ @$data->youtube }} @endforeach"
-                                    class="text-reset"><i class="mdi mdi-youtube text-light"></i></a>
-                            </li> -->
+                  
                         </ul>
                     </div>
                 </div>
@@ -147,10 +144,6 @@
                         <div class="mt-lg-0 mt-4">
                             <h5 class="footer-title text-light">Customer Service</h5>
                             <ul class="list-unstyled footer-link mt-3">
-
-                                <li>
-                                    <a class="link-effect link-warning text-light" href="{{ route('returns') }}">Returns</a>
-                                </li>
                                 <li>
                                     <a class="link-effect link-warning text-light" href="{{ route('terms') }}">Terms &
                                         Conditions</a>
@@ -164,12 +157,7 @@
         </div>
 
         <div class="row footer-border-alt mt-4 align-items-center">
-            <!-- <div class="col-sm-6">
-                <script>
-                    document.write(new Date().getFullYear())
-                </script> Design &amp; Develop by <a href="/" target="_blank"
-                    class="text-reset text-decoration-underline text-light">Avni</a>
-            </div> -->
+
             <div class="col-sm-6">
                 <div class="text-sm-end d-none d-sm-block">
                     <ul class="list-inline mb-0">
