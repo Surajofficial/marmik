@@ -351,7 +351,7 @@
 
     <!-- End Midium Banner -->
     <!-- End Most Popular Area -->
-    @if ($product_type)
+    {{-- @if ($product_type)
         <section class=" pb-5 mt-5" id="shopbyconcern">
             <div class="container-fluid p-2">
                 <div class="row justify-content-center">
@@ -403,7 +403,7 @@
             </div><!--end container-fluid-->
         </section>
     @endif
-
+ --}}
 
 
     <!-- Start Special Offer -->
